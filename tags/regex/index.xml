@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vedhavyas Singareddi</title>
-    <link>http://vedhavyas.com/</link>
-    <description>Recent content on Vedhavyas Singareddi</description>
+    <title>Regex on Vedhavyas Singareddi</title>
+    <link>http://vedhavyas.com/tags/regex/</link>
+    <description>Recent content in Regex on Vedhavyas Singareddi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 21 Aug 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://vedhavyas.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://vedhavyas.com/tags/regex/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
