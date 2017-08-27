@@ -3,6 +3,30 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://vedhavyas.com/projects/sitemap-generator/</loc>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/projects/queue/</loc>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/projects/min-binary-heap/</loc>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/projects/oauth2_central/</loc>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/projects/node-search/</loc>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/projects/machine-learning/</loc>
+  </url>
+  
+  <url>
     <loc>http://vedhavyas.com/posts/regex/</loc>
     <lastmod>2017-08-21T00:00:00+00:00</lastmod>
   </url>
@@ -13,14 +37,99 @@
   </url>
   
   <url>
+    <loc>http://vedhavyas.com/tags/fifo/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/tags/go/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/tags/golang/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/tags/graph/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/tags/heap/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/tags/knn/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/tags/machine-learning/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/tags/oauth2/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/tags/oauth2-provider/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/tags/oauth2-sso/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/tags/perceptron/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://vedhavyas.com/posts/</loc>
     <lastmod>2017-08-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>http://vedhavyas.com/projects/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/tags/queue/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://vedhavyas.com/tags/regex/</loc>
     <lastmod>2017-08-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/tags/search/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/tags/sitemap/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/tags/sitemap-generator/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/tags/sort/</loc>
     <priority>0</priority>
   </url>
   

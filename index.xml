@@ -12,6 +12,60 @@
     
     
     <item>
+      <title>Sitemap Generator</title>
+      <link>http://vedhavyas.com/projects/sitemap-generator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/projects/sitemap-generator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Queue</title>
+      <link>http://vedhavyas.com/projects/queue/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/projects/queue/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Minimum Binary Heap</title>
+      <link>http://vedhavyas.com/projects/min-binary-heap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/projects/min-binary-heap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Oauth2 Central</title>
+      <link>http://vedhavyas.com/projects/oauth2_central/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/projects/oauth2_central/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Node Search</title>
+      <link>http://vedhavyas.com/projects/node-search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/projects/node-search/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Machine Learning</title>
+      <link>http://vedhavyas.com/projects/machine-learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/projects/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Regular Expressions</title>
       <link>http://vedhavyas.com/posts/regex/</link>
       <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
