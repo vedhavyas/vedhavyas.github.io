@@ -27,12 +27,41 @@
   </url>
   
   <url>
+    <loc>http://vedhavyas.com/posts/did-you-know-chapter-1/</loc>
+    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://vedhavyas.com/posts/regex/</loc>
     <lastmod>2017-08-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>http://vedhavyas.com/tags/aimd/</loc>
+    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/tags/buffer-bloat/</loc>
+    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://vedhavyas.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/tags/circuit-switching/</loc>
+    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/tags/circuit-switching-vs-packet-switching/</loc>
+    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -43,11 +72,13 @@
   
   <url>
     <loc>http://vedhavyas.com/tags/go/</loc>
+    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://vedhavyas.com/tags/golang/</loc>
+    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -72,6 +103,12 @@
   </url>
   
   <url>
+    <loc>http://vedhavyas.com/tags/network/</loc>
+    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://vedhavyas.com/tags/oauth2/</loc>
     <priority>0</priority>
   </url>
@@ -87,13 +124,19 @@
   </url>
   
   <url>
+    <loc>http://vedhavyas.com/tags/packet-switching/</loc>
+    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://vedhavyas.com/tags/perceptron/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://vedhavyas.com/posts/</loc>
-    <lastmod>2017-08-21T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -135,13 +178,13 @@
   
   <url>
     <loc>http://vedhavyas.com/tags/</loc>
-    <lastmod>2017-08-21T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://vedhavyas.com/</loc>
-    <lastmod>2017-08-21T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

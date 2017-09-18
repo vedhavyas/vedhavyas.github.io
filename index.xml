@@ -6,7 +6,7 @@
     <description>Recent content on Vedhavyas Singareddi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 Sep 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://vedhavyas.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -63,6 +63,15 @@
       
       <guid>http://vedhavyas.com/projects/machine-learning/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Did You Know: Chapter 1</title>
+      <link>http://vedhavyas.com/posts/did-you-know-chapter-1/</link>
+      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/posts/did-you-know-chapter-1/</guid>
+      <description>The first internetwork message sent was “lo”, first 2 letters in “login”, since the receiving system crashed after “lo”. Circuit Switching Vs Packet Switching  Circuit Switching  The data is transferred in 3 phases  Connection established Data Transfer Connection Released  Each data unit knows the entire path since the path the connection is explicitly established for this transfer Hence, this is very reliable The data unit is processed at the Receiving end The delay between data unit is uniform But wastage of lots of resources  Packet Switching  Data is transferred directly Packet only know the end destination but the intermediate nodes may change Its not very reliable Data is processed at intermediate nodes as well as destination node The delay between data units is not uniform But very less resource wastage   In packet switching, due to less reliability of the transfer, we end up doing acknowledgements to and fro.</description>
     </item>
     
     <item>
