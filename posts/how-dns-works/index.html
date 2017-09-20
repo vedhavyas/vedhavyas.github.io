@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Posts</title>
+        <title>How DNS Works</title>
         <style>
 
     html body {
@@ -68,7 +68,7 @@
 
                 <div class="navbar-header">
 
-                    <a class="navbar-brand visible-xs" href="#">Posts</a>
+                    <a class="navbar-brand visible-xs" href="#">How DNS Works</a>
 
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
@@ -121,9 +121,7 @@
 
 <main>
 
-    <h2>Posts</h2>
-
-     <div class="item">
+    <div class="item">
 
     
     
@@ -136,37 +134,128 @@
      <kbd class="item-tag">dns</kbd>  <kbd class="item-tag">root-name-server</kbd>  <kbd class="item-tag">TLDs</kbd>  <kbd class="item-tag">name-servers</kbd> 
 
 </div>
-  <div class="item">
 
-    
-    
 
-    
-    
+    <br> <div class="text-justify"><p><em>Note: If you find any issues in the post, let me know in the comments section</em></p>
 
-    <h4><a href="/posts/did-you-know-chapter-1/">Did You Know: Chapter 1</a></h4>
-    <h5>September 18, 2017</h5>
-     <kbd class="item-tag">network</kbd>  <kbd class="item-tag">circuit-switching</kbd>  <kbd class="item-tag">packet-switching</kbd>  <kbd class="item-tag">circuit-switching vs packet-switching</kbd>  <kbd class="item-tag">buffer-bloat</kbd>  <kbd class="item-tag">Go</kbd>  <kbd class="item-tag">Golang</kbd>  <kbd class="item-tag">AIMD</kbd> 
+<p>This is a short post how DNS works. Prefer more comical learning, then go here - <a href="https://howdns.works/">https://howdns.works/</a></p>
 
+<p>So what happens when you type in a website address?
+User entered address <a href="https://vedhavyas.com">https://vedhavyas.com</a>. Browser needs to resolve this address to an public IP address.</p>
+
+<ol>
+<li>Browser cache
+
+<ol>
+<li>Browser check its local cache for an IP address that maps to given website address</li>
+<li>If found, call the IP address to serve the request. Job done.</li>
+<li>If not found? Move to next step</li>
+</ol></li>
+<li>OS cache
+
+<ol>
+<li>Browser asks os to resolve an IP from the address</li>
+<li>OS checks its cache. If found, let browser know about it</li>
+<li>Browser will save the ip to its cache and request is served</li>
+<li>If not found? Move to resolver</li>
+</ol></li>
+<li>Resolver cache
+
+<ol>
+<li>OS will then ask the resolver for resolve the Address</li>
+<li>Resolver is your internet service provider resolver. This is how your ISP can track your internet activity. ISP such as ACT may even block the site by not resolving the address.</li>
+<li>So, how can you unblock it? You can use a different resolver instead of your ISP resolver. I prefer DNSCrypt. It provides a wide range of DNS resolvers to pick from.</li>
+<li>Now back to resolving request. Resolver will check its cache for the IP address. If found, return back to browser and request is served.</li>
+<li>If not found? Move to root name servers</li>
+</ol></li>
+<li>Root Name servers cache
+
+<ol>
+<li>Every resolver should know at least one root name servers</li>
+<li>There are 13 root name servers around the world.</li>
+<li>Now root name server will search its cache for IP. If found, give it resolver</li>
+<li>If not found, it give resolvers the address of the Top Level Domain of the address to talk to. In our case its “.com” TLD, one of the largest TLD&rsquo;s</li>
+</ol></li>
+<li>TLD cache
+
+<ol>
+<li>If TLD has IP info of the address, gives it back to resolver</li>
+<li>If not, TLD will provide address of the name servers of the domain “Vedhavyas.com”</li>
+<li>In our case, TLD will provide the following name server address
+
+<ol>
+<li>alex.ns.cloudflare.com</li>
+<li>cass.ns.cloudflare.com</li>
+</ol></li>
+<li>But how would TLD would know the name server address?
+
+<ol>
+<li>Domain registrar. Whenever you buy a domain from a domain registrar, They communicate the name server details with the TLD</li>
+<li>My Domain registrar here is namecheap.com. This is where I provide them the custom name servers of cloudflare.com</li>
+<li>Else, namecheap.com will provide their own name servers</li>
+</ol></li>
+<li>Whats happens if the name server is a subdomain of the website we have asked for? Wouldn’t that be an infinite loop?
+
+<ol>
+<li>Well, TLD provides name server address along with their IPs.</li>
+<li>So that resolver can directly talk to name server since those addresses are already resolved</li>
+</ol></li>
+<li>Why multiple name servers?
+
+<ol>
+<li>Just in case one goes down :p</li>
+</ol></li>
+</ol></li>
+<li>Name Servers
+
+<ol>
+<li>Name servers should know the IP address of the website, given website owner provided necessary details</li>
+<li>If not preset, then you will see a sad smiley on your browser saying failed to resolve the address.</li>
+<li>In our case, I have provided cloudflare.com required IP address of my website. Sometimes there can be multiple IP addresses as well. Just to in case ;p</li>
+<li>My IP address are “192.30.252.153”, “192.30.252.154”. These are IP addresses of GitHub.com server where my website is hosted</li>
+</ol></li>
+<li>Return
+
+<ol>
+<li>Now resolver will cache all the necessary info during this trip to about any further trips</li>
+<li>The IP address is given to your browser and the website is served.</li>
+</ol></li>
+</ol>
 </div>
-  <div class="item">
 
     
     
 
     
+
     
 
-    <h4><a href="/posts/regex/">Regular Expressions</a></h4>
-    <h5>August 21, 2017</h5>
-     <kbd class="item-tag">regex</kbd> 
+        <h4 class="page-header">Comments</h4>
 
-</div>
- 
+        <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "vedhavyas" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
 
 </main>
-
-
 
         <footer>
 
