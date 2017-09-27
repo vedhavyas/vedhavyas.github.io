@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Vedhavyas Singareddi</title>
+    <link>http://vedhavyas.com/tags/linux/</link>
+    <description>Recent content in Linux on Vedhavyas Singareddi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 27 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://vedhavyas.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Did You Know: Chapter 2</title>
+      <link>http://vedhavyas.com/posts/did-you-know-2/</link>
+      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/posts/did-you-know-2/</guid>
+      <description>In the Soviet era Russia your land could be transferred to others by the state and hence was not private property. The .COM TLD was one of the first created in 1985 Root name servers  There are 13 root name server around the world operated by 12 independent organisations Each name server starts with [name].root-servers.net, with name replaced with any of chars including [a-m] Even though there are 13 root name servers, each of the 13 organisations that maintain these servers deploys multiple physical servers around the globe This basically means, there is load balancer for each root name server before all the physical servers deployed in different locations Infrastructure TLDs: .</description>
+    </item>
+    
+  </channel>
+</rss>
