@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Networking in Go</title>
+        <style>
+
+    html body {
+        font-family: Raleway, sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: black;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.26" />
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Networking in Go</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/posts/">Posts</a></li>
+                            
+                                <li><a href="/projects/">Projects</a></li>
+                            
+                                <li><a href="/tags/">Tags</a></li>
+                            
+                                <li><a href="https://drive.google.com/open?id=0B39uOd0SSzeSeWQwWHo5cDB0OEU">Resume</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:vedhavyas@vedhavyas.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/vedhavyas/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/Svedhavyas/"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/vedhavyas/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://stackoverflow.com/users/3563197/vedhavyas"><i class="fa fa-stack-overflow"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+
+    
+    
+
+    <h4><a href="/posts/networking_in_go/">Networking in Go</a></h4>
+    <h5>October 8, 2017</h5>
+     <kbd class="item-tag">tcp</kbd>  <kbd class="item-tag">udp</kbd>  <kbd class="item-tag">ip</kbd>  <kbd class="item-tag">networking</kbd>  <kbd class="item-tag">OSI</kbd> 
+
+</div>
+
+
+    <br> <div class="text-justify"><ul>
+<li>Architecture
+
+<ul>
+<li>Network protocols
+
+<ul>
+<li>ISO OSI - Open systems interconnect
+
+<ul>
+<li>Application</li>
+<li>Presentation</li>
+<li>Session</li>
+<li>Transport</li>
+<li>Network</li>
+<li>Data Link</li>
+<li>Physical</li>
+</ul></li>
+<li>TCP/IP - Transmission control/ Internet Protocol
+
+<ul>
+<li>Application (Application, presentation, session)</li>
+<li>TCP / UDP (transport)</li>
+<li>IP (Network)</li>
+<li>H/w interface (Data Link, Physical)</li>
+</ul></li>
+<li>Other protocols include
+
+<ul>
+<li>Bluetooth</li>
+<li>WiFi</li>
+<li>USB</li>
+<li>Firewire</li>
+</ul></li>
+</ul></li>
+<li>Gateways
+
+<ul>
+<li>Repeater operates at physical layer and copies data from one subnet to another</li>
+<li>A bridge operates at Data Link layer and copies frames between networks</li>
+<li>Router operates at transport layer and not only moves data between networks but also decides on route</li>
+</ul></li>
+<li>Flow
+
+<ul>
+<li>Each layer add a header to the packet from top to bottom</li>
+<li>Once received, each header is removed at the specific layer</li>
+</ul></li>
+<li>Connection Models
+
+<ul>
+<li>Connection oriented
+
+<ul>
+<li>Single connection is used to transfer packets from one network to other</li>
+<li>Once done, connection is closed</li>
+<li>Ex: Telephone conversation</li>
+<li>TCP</li>
+</ul></li>
+<li>Connectionless
+
+<ul>
+<li>Each transfer is sent independently</li>
+<li>Ex: ordinary mail</li>
+<li>IP</li>
+<li>Connection networks are built over connection less. Ex: TCP over IP</li>
+<li>Connection less are built over connection. Ex: HTTP over TCP</li>
+</ul></li>
+</ul></li>
+<li>Distributed Computing Models
+
+<ul>
+<li>Client - Server
+
+<ul>
+<li>Client sends a request and server replies back</li>
+</ul></li>
+<li>Peer - peer
+
+<ul>
+<li>Two components talk to each other in bi-directional way</li>
+<li>I.e.. both can request and both can respond</li>
+</ul></li>
+<li>filter
+
+<ul>
+<li>Data is sent to a middle component which applies filter to the data and is passed on to third component</li>
+<li>Ex: Model -&gt; Controller -&gt; View</li>
+</ul></li>
+</ul></li>
+<li>Gartner’s classification of Component Distribution
+
+<ul>
+<li>Distributed Data
+
+<ul>
+<li>Small portion of data is held locally and large chunk remotely</li>
+<li>Ex: Mobile phone</li>
+</ul></li>
+<li>Remote Data
+
+<ul>
+<li>Data is completely held remotely</li>
+<li>Ex: Network file service</li>
+</ul></li>
+<li>Distributed Transaction
+
+<ul>
+<li>Logic is shared locally and remotely</li>
+<li>Ex: Web</li>
+<li>HTML javascript locally, server remotely</li>
+</ul></li>
+<li>Remote Presentation
+
+<ul>
+<li>Ex: SSH</li>
+</ul></li>
+<li>Distributed Presentation
+
+<ul>
+<li>Ex: GUI</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Socket-level programming
+
+<ul>
+<li>TCP is connection oriented protocol</li>
+<li>UDP (User Datagram Protocol) is a connectionless protocol</li>
+<li>IP Datagram
+
+<ul>
+<li>It is a connection less, unreliable delivery system</li>
+<li>Every datagram is considered independent</li>
+<li>It include checksum of source and destination to the header</li>
+<li>It also takes care of dividing and assembling larger datagrams to smaller and vice versa</li>
+</ul></li>
+<li>UDP Datagram
+
+<ul>
+<li>It is a connection less protocol.</li>
+<li>It adds to IP, checksum of contents and ports</li>
+</ul></li>
+<li>TCP Datagram
+
+<ul>
+<li>It provides reliable delivery system</li>
+<li>Services are identified by port numbers</li>
+</ul></li>
+</ul></li>
+<li>Data Serialisation
+
+<ul>
+<li>Data is sent across networks as sequence of bytes</li>
+<li>TCP and UDP provide mechanisms for data transfer</li>
+<li>Application has to take care of marshalling and unmarshalling data. Typically converting the data structures to stream of bytes and back to data structures on the receiving end</li>
+<li>The Unmarshalling has to how the data was serialised in order to unmarshall it correctly</li>
+<li>XDR by sun
+
+<ul>
+<li>External Data representation</li>
+<li>An early serialisation technique</li>
+<li>It type unsafe since no type info was provided in byte stream for unmarshaller</li>
+<li>Correctness was ensured by generating marshaller and unmarshaller by the compilers itself</li>
+</ul></li>
+<li>Self describing data</li>
+<li>ASN.1
+
+<ul>
+<li>Go does not support full list of ASN types and structures</li>
+</ul></li>
+<li>JSON</li>
+<li>GOB
+
+<ul>
+<li>Serialisation technique specific for Go types and structures</li>
+<li>Doesn’t support by anyone out there</li>
+</ul></li>
+<li>Go also supports binary to text formats
+
+<ul>
+<li>Base64 is one such</li>
+</ul></li>
+</ul></li>
+<li>Data Transfer
+
+<ul>
+<li>HTTP transfer types:
+
+<ul>
+<li>Byte encoded
+
+<ul>
+<li>First part of the message is single byte to distinguish between different encodings</li>
+</ul></li>
+<li>Character encoded
+
+<ul>
+<li>Message in the first line is a character to distinguish</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+    
+    
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "vedhavyas" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+
+    </body>
+
+</html>
+

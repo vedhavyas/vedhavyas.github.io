@@ -27,6 +27,21 @@
   </url>
   
   <url>
+    <loc>http://vedhavyas.com/posts/different_io_methods_for_linux/</loc>
+    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/posts/distributed_sys_for_fun_profit/</loc>
+    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/posts/networking_in_go/</loc>
+    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://vedhavyas.com/posts/did-you-know-2/</loc>
     <lastmod>2017-09-27T00:00:00+00:00</lastmod>
   </url>
@@ -53,8 +68,26 @@
   </url>
   
   <url>
+    <loc>http://vedhavyas.com/tags/aio/</loc>
+    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/tags/async-direct-io/</loc>
+    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://vedhavyas.com/tags/buffer-bloat/</loc>
     <lastmod>2017-09-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/tags/byzantine-problem/</loc>
+    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -78,6 +111,24 @@
   <url>
     <loc>http://vedhavyas.com/tags/cmd/</loc>
     <lastmod>2017-09-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/tags/dio/</loc>
+    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/tags/direct-io/</loc>
+    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/tags/distributed-systems/</loc>
+    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -115,6 +166,18 @@
   </url>
   
   <url>
+    <loc>http://vedhavyas.com/tags/i/o/</loc>
+    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/tags/ip/</loc>
+    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://vedhavyas.com/tags/knn/</loc>
     <priority>0</priority>
   </url>
@@ -131,6 +194,12 @@
   </url>
   
   <url>
+    <loc>http://vedhavyas.com/tags/mmap/</loc>
+    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://vedhavyas.com/tags/name-servers/</loc>
     <lastmod>2017-09-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -139,6 +208,12 @@
   <url>
     <loc>http://vedhavyas.com/tags/network/</loc>
     <lastmod>2017-09-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/tags/networking/</loc>
+    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -158,8 +233,20 @@
   </url>
   
   <url>
+    <loc>http://vedhavyas.com/tags/osi/</loc>
+    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://vedhavyas.com/tags/packet-switching/</loc>
     <lastmod>2017-09-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/tags/paxos/</loc>
+    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -170,7 +257,7 @@
   
   <url>
     <loc>http://vedhavyas.com/posts/</loc>
-    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
+    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -181,6 +268,18 @@
   
   <url>
     <loc>http://vedhavyas.com/tags/queue/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/tags/raft/</loc>
+    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/tags/read/write/</loc>
+    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -223,6 +322,12 @@
   </url>
   
   <url>
+    <loc>http://vedhavyas.com/tags/tcp/</loc>
+    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://vedhavyas.com/tags/tgz/</loc>
     <lastmod>2017-09-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -241,8 +346,14 @@
   </url>
   
   <url>
+    <loc>http://vedhavyas.com/tags/udp/</loc>
+    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://vedhavyas.com/</loc>
-    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
+    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

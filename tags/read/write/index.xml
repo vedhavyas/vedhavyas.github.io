@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Read/Write on Vedhavyas Singareddi</title>
+    <link>http://vedhavyas.com/tags/read/write/</link>
+    <description>Recent content in Read/Write on Vedhavyas Singareddi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 08 Oct 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://vedhavyas.com/tags/read/write/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Different IO methods for Linux</title>
+      <link>http://vedhavyas.com/posts/different_io_methods_for_linux/</link>
+      <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/posts/different_io_methods_for_linux/</guid>
+      <description>Different Access I/O methods for Linux Types of Access:
+ Read/Write MMAP Direct I/O Read/Write (DIO) Asynchronous Direct I/O Read/Write(ADIO)  Read/Write: Traditional Read/Write and its variants(pread, preadv etc&amp;hellip;) use read(2) and write(2) for reading and writing. Kernel will copy the required read data in the process address space and returns. If the requested data is available in page cache, kernel will return the data from page cache immediately. If not, blocks the thread and requests the disk to fetch the requested data.</description>
+    </item>
+    
+  </channel>
+</rss>

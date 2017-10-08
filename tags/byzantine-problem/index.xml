@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Byzantine Problem on Vedhavyas Singareddi</title>
+    <link>http://vedhavyas.com/tags/byzantine-problem/</link>
+    <description>Recent content in Byzantine Problem on Vedhavyas Singareddi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 08 Oct 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://vedhavyas.com/tags/byzantine-problem/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Distributed systems for Fun and Profit</title>
+      <link>http://vedhavyas.com/posts/distributed_sys_for_fun_profit/</link>
+      <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/posts/distributed_sys_for_fun_profit/</guid>
+      <description>Distributed systems for Fun and Profit Partitioning:  Divide data into smaller independent subsets thereby reducing impact of dataset growth. Improves performance by limiting the amount of data to be examined and locating required data within the subset Improves availability as the nodes can fail independently Partition is very application specific  Replication:  Copies of same data over multiple machines to make available more bandwidth and computation Provides more availability as nodes can fail independently Since there will be multiple copies of a Data, need for good consistency model is required.</description>
+    </item>
+    
+  </channel>
+</rss>

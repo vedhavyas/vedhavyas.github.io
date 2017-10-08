@@ -6,7 +6,7 @@
     <description>Recent content on Vedhavyas Singareddi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Oct 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://vedhavyas.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -63,6 +63,34 @@
       
       <guid>http://vedhavyas.com/projects/machine-learning/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Different IO methods for Linux</title>
+      <link>http://vedhavyas.com/posts/different_io_methods_for_linux/</link>
+      <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/posts/different_io_methods_for_linux/</guid>
+      <description>Different Access I/O methods for Linux Types of Access:
+ Read/Write MMAP Direct I/O Read/Write (DIO) Asynchronous Direct I/O Read/Write(ADIO)  Read/Write: Traditional Read/Write and its variants(pread, preadv etc&amp;hellip;) use read(2) and write(2) for reading and writing. Kernel will copy the required read data in the process address space and returns. If the requested data is available in page cache, kernel will return the data from page cache immediately. If not, blocks the thread and requests the disk to fetch the requested data.</description>
+    </item>
+    
+    <item>
+      <title>Distributed systems for Fun and Profit</title>
+      <link>http://vedhavyas.com/posts/distributed_sys_for_fun_profit/</link>
+      <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/posts/distributed_sys_for_fun_profit/</guid>
+      <description>Distributed systems for Fun and Profit Partitioning:  Divide data into smaller independent subsets thereby reducing impact of dataset growth. Improves performance by limiting the amount of data to be examined and locating required data within the subset Improves availability as the nodes can fail independently Partition is very application specific  Replication:  Copies of same data over multiple machines to make available more bandwidth and computation Provides more availability as nodes can fail independently Since there will be multiple copies of a Data, need for good consistency model is required.</description>
+    </item>
+    
+    <item>
+      <title>Networking in Go</title>
+      <link>http://vedhavyas.com/posts/networking_in_go/</link>
+      <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/posts/networking_in_go/</guid>
+      <description>Architecture  Network protocols  ISO OSI - Open systems interconnect  Application Presentation Session Transport Network Data Link Physical  TCP/IP - Transmission control/ Internet Protocol  Application (Application, presentation, session) TCP / UDP (transport) IP (Network) H/w interface (Data Link, Physical)  Other protocols include  Bluetooth WiFi USB Firewire   Gateways  Repeater operates at physical layer and copies data from one subnet to another A bridge operates at Data Link layer and copies frames between networks Router operates at transport layer and not only moves data between networks but also decides on route  Flow  Each layer add a header to the packet from top to bottom Once received, each header is removed at the specific layer  Connection Models  Connection oriented  Single connection is used to transfer packets from one network to other Once done, connection is closed Ex: Telephone conversation TCP  Connectionless  Each transfer is sent independently Ex: ordinary mail IP Connection networks are built over connection less.</description>
     </item>
     
     <item>
