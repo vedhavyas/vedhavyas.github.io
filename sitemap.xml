@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://vedhavyas.com/projects/sitemap-generator/</loc>
+    <loc>http://vedhavyas.com/projects/scrape/</loc>
   </url>
   
   <url>
@@ -296,12 +296,12 @@
   </url>
   
   <url>
-    <loc>http://vedhavyas.com/tags/search/</loc>
+    <loc>http://vedhavyas.com/tags/scrape/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://vedhavyas.com/tags/sitemap/</loc>
+    <loc>http://vedhavyas.com/tags/search/</loc>
     <priority>0</priority>
   </url>
   
@@ -354,6 +354,11 @@
   <url>
     <loc>http://vedhavyas.com/</loc>
     <lastmod>2017-10-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/tags/web-scraping/</loc>
     <priority>0</priority>
   </url>
   
