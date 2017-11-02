@@ -3,6 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://vedhavyas.com/projects/cuckoo-filter/</loc>
+  </url>
+  
+  <url>
     <loc>http://vedhavyas.com/projects/scrape/</loc>
   </url>
   
@@ -80,6 +84,11 @@
   </url>
   
   <url>
+    <loc>http://vedhavyas.com/tags/bloom-filter-alternative/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://vedhavyas.com/tags/buffer-bloat/</loc>
     <lastmod>2017-09-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -111,6 +120,11 @@
   <url>
     <loc>http://vedhavyas.com/tags/cmd/</loc>
     <lastmod>2017-09-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/tags/cuckoo-filter/</loc>
     <priority>0</priority>
   </url>
   
@@ -258,6 +272,11 @@
   <url>
     <loc>http://vedhavyas.com/posts/</loc>
     <lastmod>2017-10-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vedhavyas.com/tags/probabilistic-data-structures/</loc>
     <priority>0</priority>
   </url>
   

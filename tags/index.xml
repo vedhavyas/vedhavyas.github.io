@@ -39,6 +39,15 @@
     </item>
     
     <item>
+      <title>Bloom Filter Alternative</title>
+      <link>http://vedhavyas.com/tags/bloom-filter-alternative/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/tags/bloom-filter-alternative/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Buffer Bloat</title>
       <link>http://vedhavyas.com/tags/buffer-bloat/</link>
       <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
@@ -80,6 +89,15 @@
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>http://vedhavyas.com/tags/cmd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cuckoo Filter</title>
+      <link>http://vedhavyas.com/tags/cuckoo-filter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/tags/cuckoo-filter/</guid>
       <description></description>
     </item>
     
@@ -305,6 +323,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://vedhavyas.com/tags/perceptron/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Probabilistic Data Structures</title>
+      <link>http://vedhavyas.com/tags/probabilistic-data-structures/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/tags/probabilistic-data-structures/</guid>
       <description></description>
     </item>
     
