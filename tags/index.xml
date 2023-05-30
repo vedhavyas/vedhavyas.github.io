@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Vedhavyas Singareddi</title>
@@ -6,22 +6,9 @@
     <description>Recent content in Tags on Vedhavyas Singareddi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Sep 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://vedhavyas.com/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 08 Oct 2017 00:00:00 +0000</lastBuildDate><atom:link href="http://vedhavyas.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Aimd</title>
-      <link>http://vedhavyas.com/tags/aimd/</link>
-      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://vedhavyas.com/tags/aimd/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Aio</title>
+      <title>AIO</title>
       <link>http://vedhavyas.com/tags/aio/</link>
       <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
       
@@ -30,7 +17,7 @@
     </item>
     
     <item>
-      <title>Async Direct Io</title>
+      <title>Async Direct IO</title>
       <link>http://vedhavyas.com/tags/async-direct-io/</link>
       <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
       
@@ -39,25 +26,7 @@
     </item>
     
     <item>
-      <title>Bloom Filter Alternative</title>
-      <link>http://vedhavyas.com/tags/bloom-filter-alternative/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://vedhavyas.com/tags/bloom-filter-alternative/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Buffer Bloat</title>
-      <link>http://vedhavyas.com/tags/buffer-bloat/</link>
-      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://vedhavyas.com/tags/buffer-bloat/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Byzantine Problem</title>
+      <title>byzantine-problem</title>
       <link>http://vedhavyas.com/tags/byzantine-problem/</link>
       <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
       
@@ -66,43 +35,7 @@
     </item>
     
     <item>
-      <title>Circuit Switching</title>
-      <link>http://vedhavyas.com/tags/circuit-switching/</link>
-      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://vedhavyas.com/tags/circuit-switching/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Circuit Switching vs Packet Switching</title>
-      <link>http://vedhavyas.com/tags/circuit-switching-vs-packet-switching/</link>
-      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://vedhavyas.com/tags/circuit-switching-vs-packet-switching/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cmd</title>
-      <link>http://vedhavyas.com/tags/cmd/</link>
-      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://vedhavyas.com/tags/cmd/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cuckoo Filter</title>
-      <link>http://vedhavyas.com/tags/cuckoo-filter/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://vedhavyas.com/tags/cuckoo-filter/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Dio</title>
+      <title>DIO</title>
       <link>http://vedhavyas.com/tags/dio/</link>
       <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
       
@@ -111,7 +44,7 @@
     </item>
     
     <item>
-      <title>Direct Io</title>
+      <title>Direct IO</title>
       <link>http://vedhavyas.com/tags/direct-io/</link>
       <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
       
@@ -120,7 +53,7 @@
     </item>
     
     <item>
-      <title>Distributed Systems</title>
+      <title>distributed-systems</title>
       <link>http://vedhavyas.com/tags/distributed-systems/</link>
       <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
       
@@ -129,7 +62,115 @@
     </item>
     
     <item>
-      <title>Dns</title>
+      <title>ip</title>
+      <link>http://vedhavyas.com/tags/ip/</link>
+      <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/tags/ip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MMAP</title>
+      <link>http://vedhavyas.com/tags/mmap/</link>
+      <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/tags/mmap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>networking</title>
+      <link>http://vedhavyas.com/tags/networking/</link>
+      <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/tags/networking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OSI</title>
+      <link>http://vedhavyas.com/tags/osi/</link>
+      <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/tags/osi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>paxos</title>
+      <link>http://vedhavyas.com/tags/paxos/</link>
+      <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/tags/paxos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>raft</title>
+      <link>http://vedhavyas.com/tags/raft/</link>
+      <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/tags/raft/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tcp</title>
+      <link>http://vedhavyas.com/tags/tcp/</link>
+      <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/tags/tcp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>udp</title>
+      <link>http://vedhavyas.com/tags/udp/</link>
+      <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/tags/udp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cmd</title>
+      <link>http://vedhavyas.com/tags/cmd/</link>
+      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/tags/cmd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>http://vedhavyas.com/tags/linux/</link>
+      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tgz</title>
+      <link>http://vedhavyas.com/tags/tgz/</link>
+      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/tags/tgz/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tld</title>
+      <link>http://vedhavyas.com/tags/tld/</link>
+      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/tags/tld/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dns</title>
       <link>http://vedhavyas.com/tags/dns/</link>
       <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
       
@@ -138,11 +179,65 @@
     </item>
     
     <item>
-      <title>Fifo</title>
-      <link>http://vedhavyas.com/tags/fifo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>name-servers</title>
+      <link>http://vedhavyas.com/tags/name-servers/</link>
+      <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://vedhavyas.com/tags/fifo/</guid>
+      <guid>http://vedhavyas.com/tags/name-servers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>root-name-server</title>
+      <link>http://vedhavyas.com/tags/root-name-server/</link>
+      <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/tags/root-name-server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TLDs</title>
+      <link>http://vedhavyas.com/tags/tlds/</link>
+      <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/tags/tlds/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AIMD</title>
+      <link>http://vedhavyas.com/tags/aimd/</link>
+      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/tags/aimd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>buffer-bloat</title>
+      <link>http://vedhavyas.com/tags/buffer-bloat/</link>
+      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/tags/buffer-bloat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>circuit-switching</title>
+      <link>http://vedhavyas.com/tags/circuit-switching/</link>
+      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/tags/circuit-switching/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>circuit-switching vs packet-switching</title>
+      <link>http://vedhavyas.com/tags/circuit-switching-vs-packet-switching/</link>
+      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/tags/circuit-switching-vs-packet-switching/</guid>
       <description></description>
     </item>
     
@@ -165,7 +260,61 @@
     </item>
     
     <item>
-      <title>Graph</title>
+      <title>network</title>
+      <link>http://vedhavyas.com/tags/network/</link>
+      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/tags/network/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>packet-switching</title>
+      <link>http://vedhavyas.com/tags/packet-switching/</link>
+      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/tags/packet-switching/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>regex</title>
+      <link>http://vedhavyas.com/tags/regex/</link>
+      <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/tags/regex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bloom-filter-alternative</title>
+      <link>http://vedhavyas.com/tags/bloom-filter-alternative/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/tags/bloom-filter-alternative/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cuckoo-filter</title>
+      <link>http://vedhavyas.com/tags/cuckoo-filter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/tags/cuckoo-filter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fifo</title>
+      <link>http://vedhavyas.com/tags/fifo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://vedhavyas.com/tags/fifo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>graph</title>
       <link>http://vedhavyas.com/tags/graph/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -174,7 +323,7 @@
     </item>
     
     <item>
-      <title>Heap</title>
+      <title>heap</title>
       <link>http://vedhavyas.com/tags/heap/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -185,23 +334,14 @@
     <item>
       <title>I/O</title>
       <link>http://vedhavyas.com/tags/i/o/</link>
-      <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://vedhavyas.com/tags/i/o/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Ip</title>
-      <link>http://vedhavyas.com/tags/ip/</link>
-      <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://vedhavyas.com/tags/ip/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Knn</title>
+      <title>knn</title>
       <link>http://vedhavyas.com/tags/knn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -210,16 +350,7 @@
     </item>
     
     <item>
-      <title>Linux</title>
-      <link>http://vedhavyas.com/tags/linux/</link>
-      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://vedhavyas.com/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Machine Learning</title>
+      <title>machine-learning</title>
       <link>http://vedhavyas.com/tags/machine-learning/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -228,43 +359,7 @@
     </item>
     
     <item>
-      <title>Mmap</title>
-      <link>http://vedhavyas.com/tags/mmap/</link>
-      <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://vedhavyas.com/tags/mmap/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Name Servers</title>
-      <link>http://vedhavyas.com/tags/name-servers/</link>
-      <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://vedhavyas.com/tags/name-servers/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Network</title>
-      <link>http://vedhavyas.com/tags/network/</link>
-      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://vedhavyas.com/tags/network/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Networking</title>
-      <link>http://vedhavyas.com/tags/networking/</link>
-      <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://vedhavyas.com/tags/networking/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Oauth2</title>
+      <title>oauth2</title>
       <link>http://vedhavyas.com/tags/oauth2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -273,7 +368,7 @@
     </item>
     
     <item>
-      <title>Oauth2 Provider</title>
+      <title>oauth2-provider</title>
       <link>http://vedhavyas.com/tags/oauth2-provider/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -282,7 +377,7 @@
     </item>
     
     <item>
-      <title>Oauth2 Sso</title>
+      <title>oauth2-sso</title>
       <link>http://vedhavyas.com/tags/oauth2-sso/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -291,34 +386,7 @@
     </item>
     
     <item>
-      <title>Osi</title>
-      <link>http://vedhavyas.com/tags/osi/</link>
-      <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://vedhavyas.com/tags/osi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Packet Switching</title>
-      <link>http://vedhavyas.com/tags/packet-switching/</link>
-      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://vedhavyas.com/tags/packet-switching/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Paxos</title>
-      <link>http://vedhavyas.com/tags/paxos/</link>
-      <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://vedhavyas.com/tags/paxos/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Perceptron</title>
+      <title>perceptron</title>
       <link>http://vedhavyas.com/tags/perceptron/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -327,7 +395,7 @@
     </item>
     
     <item>
-      <title>Probabilistic Data Structures</title>
+      <title>probabilistic-data-structures</title>
       <link>http://vedhavyas.com/tags/probabilistic-data-structures/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -336,7 +404,7 @@
     </item>
     
     <item>
-      <title>Queue</title>
+      <title>queue</title>
       <link>http://vedhavyas.com/tags/queue/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -345,43 +413,16 @@
     </item>
     
     <item>
-      <title>Raft</title>
-      <link>http://vedhavyas.com/tags/raft/</link>
-      <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://vedhavyas.com/tags/raft/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Read/Write</title>
       <link>http://vedhavyas.com/tags/read/write/</link>
-      <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://vedhavyas.com/tags/read/write/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Regex</title>
-      <link>http://vedhavyas.com/tags/regex/</link>
-      <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://vedhavyas.com/tags/regex/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Root Name Server</title>
-      <link>http://vedhavyas.com/tags/root-name-server/</link>
-      <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://vedhavyas.com/tags/root-name-server/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Scrape</title>
+      <title>scrape</title>
       <link>http://vedhavyas.com/tags/scrape/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -390,7 +431,7 @@
     </item>
     
     <item>
-      <title>Search</title>
+      <title>search</title>
       <link>http://vedhavyas.com/tags/search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -399,7 +440,7 @@
     </item>
     
     <item>
-      <title>Sitemap Generator</title>
+      <title>sitemap-generator</title>
       <link>http://vedhavyas.com/tags/sitemap-generator/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -408,7 +449,7 @@
     </item>
     
     <item>
-      <title>Sort</title>
+      <title>sort</title>
       <link>http://vedhavyas.com/tags/sort/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -417,52 +458,7 @@
     </item>
     
     <item>
-      <title>Tcp</title>
-      <link>http://vedhavyas.com/tags/tcp/</link>
-      <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://vedhavyas.com/tags/tcp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tgz</title>
-      <link>http://vedhavyas.com/tags/tgz/</link>
-      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://vedhavyas.com/tags/tgz/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tld</title>
-      <link>http://vedhavyas.com/tags/tld/</link>
-      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://vedhavyas.com/tags/tld/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tlds</title>
-      <link>http://vedhavyas.com/tags/tlds/</link>
-      <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://vedhavyas.com/tags/tlds/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Udp</title>
-      <link>http://vedhavyas.com/tags/udp/</link>
-      <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://vedhavyas.com/tags/udp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Web Scraping</title>
+      <title>web scraping</title>
       <link>http://vedhavyas.com/tags/web-scraping/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       

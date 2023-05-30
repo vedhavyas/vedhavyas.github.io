@@ -1,15 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sitemap Generator on Vedhavyas Singareddi</title>
+    <title>sitemap-generator on Vedhavyas Singareddi</title>
     <link>http://vedhavyas.com/tags/sitemap-generator/</link>
-    <description>Recent content in Sitemap Generator on Vedhavyas Singareddi</description>
+    <description>Recent content in sitemap-generator on Vedhavyas Singareddi</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="http://vedhavyas.com/tags/sitemap-generator/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="http://vedhavyas.com/tags/sitemap-generator/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Scrape</title>
       <link>http://vedhavyas.com/projects/scrape/</link>

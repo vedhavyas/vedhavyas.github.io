@@ -2,32 +2,15 @@
 <html lang="en-us">
     <head>
         
-        <meta itemprop="name" content="Vedhavyas Singareddi">
-        <meta itemprop="description" content="Distributed Systems Engineer. Gopher. Ployglot. Cyclist">
-        <meta itemprop="image" content="https://i.imgur.com/OXDc3lb.jpg">
-        <meta name="google-site-verification" content="wjvbnnw0onCDMBoFp3WxWViLzY_L0sM89J2eDVfLKSg" />
-
-        
-        <meta property="og:url" content="https://vedhavyas.com">
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="Vedhavyas Singareddi">
-        <meta property="og:description" content="Distributed Systems Engineer. Gopher. Ployglot. Cyclist">
-        <meta property="og:image" content="https://i.imgur.com/OXDc3lb.jpg">
-
-        
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Vedhavyas Singareddi">
-        <meta name="twitter:description" content="Distributed Systems Engineer. Gopher. Ployglot. Cyclist">
-        <meta name="twitter:image" content="https://i.imgur.com/OXDc3lb.jpg">
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
         <title>Different IO methods for Linux</title>
+        
         <style>
 
     html body {
-        font-family: Raleway, sans-serif;
+        font-family: 'Raleway', sans-serif;
         background-color: white;
     }
 
@@ -39,7 +22,7 @@
 </style>
 
 
-<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="http://vedhavyas.com/css/main.css">
 
 
 
@@ -48,20 +31,27 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
 
- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"> 
 
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
 
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
  
 
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-
-     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>
+    
     <script>hljs.initHighlightingOnLoad();</script>
 
 
@@ -69,37 +59,40 @@
 
 
 
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 
 <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
- <meta name="generator" content="Hugo 0.26" />
+ <meta name="generator" content="Hugo 0.112.5">
+        
+
+        
+
+        
+            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+
+        
+
     </head>
 
     <body>
+        
 
         <nav class="navbar navbar-default navbar-fixed-top">
-
             <div class="container">
-
                 <div class="navbar-header">
-
                     <a class="navbar-brand visible-xs" href="#">Different IO methods for Linux</a>
-
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-
                 </div>
-
                 <div class="collapse navbar-collapse">
-
                     
                         <ul class="nav navbar-nav">
                             
@@ -115,154 +108,95 @@
                             
                         </ul>
                     
-
                     
                         <ul class="nav navbar-nav navbar-right">
                             
-                                <li class="navbar-icon"><a href="mailto:vedhavyas@vedhavyas.com"><i class="fa fa-envelope-o"></i></a></li>
+                                <li class="navbar-icon"><a href="mailto:vedhavyas@vedhavyas.com"><i class="envelope-o"></i></a></li>
                             
-                                <li class="navbar-icon"><a href="https://github.com/vedhavyas/"><i class="fa fa-github"></i></a></li>
+                                <li class="navbar-icon"><a href="https://github.com/vedhavyas/"><i class="github"></i></a></li>
                             
-                                <li class="navbar-icon"><a href="https://twitter.com/Svedhavyas/"><i class="fa fa-twitter"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/vedhavyas/"><i class="fa fa-linkedin"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://stackoverflow.com/users/3563197/vedhavyas"><i class="fa fa-stack-overflow"></i></a></li>
+                                <li class="navbar-icon"><a href="https://stackoverflow.com/users/3563197/vedhavyas"><i class="stack-overflow"></i></a></li>
                             
                         </ul>
                     
-
                 </div>
-
             </div>
-
         </nav>
 
 
 <main>
 
-    <div class="item">
+    <div>
+        <h2>Different IO methods for Linux</h2>
+        <h5></h5>
+        
+<a href="http://vedhavyas.com/tags/i/o"><kbd class="item-tag">I/O</kbd></a>
 
-    
-    
+<a href="http://vedhavyas.com/tags/mmap"><kbd class="item-tag">MMAP</kbd></a>
 
-    
-    
+<a href="http://vedhavyas.com/tags/read/write"><kbd class="item-tag">Read/Write</kbd></a>
 
-    <h4><a href="/posts/different_io_methods_for_linux/">Different IO methods for Linux</a></h4>
-    <h5>October 8, 2017</h5>
-     <kbd class="item-tag">I/O</kbd>  <kbd class="item-tag">MMAP</kbd>  <kbd class="item-tag">Read/Write</kbd>  <kbd class="item-tag">Direct IO</kbd>  <kbd class="item-tag">Async Direct IO</kbd>  <kbd class="item-tag">AIO</kbd>  <kbd class="item-tag">DIO</kbd> 
+<a href="http://vedhavyas.com/tags/direct-io"><kbd class="item-tag">Direct IO</kbd></a>
 
-</div>
+<a href="http://vedhavyas.com/tags/async-direct-io"><kbd class="item-tag">Async Direct IO</kbd></a>
+
+<a href="http://vedhavyas.com/tags/aio"><kbd class="item-tag">AIO</kbd></a>
+
+<a href="http://vedhavyas.com/tags/dio"><kbd class="item-tag">DIO</kbd></a>
 
 
-    <br> <div class="text-justify">
+    </div>
 
-<h1 id="different-access-i-o-methods-for-linux">Different Access I/O methods for Linux</h1>
-
+    <div align="start" class="content"><h1 id="different-access-io-methods-for-linux">Different Access I/O methods for Linux</h1>
 <p>Types of Access:</p>
-
 <ol>
 <li>Read/Write</li>
 <li>MMAP</li>
 <li>Direct I/O Read/Write (DIO)</li>
 <li>Asynchronous Direct I/O Read/Write(ADIO)</li>
 </ol>
-
-<h2 id="read-write">Read/Write:</h2>
-
+<h2 id="readwrite">Read/Write:</h2>
 <p>Traditional Read/Write and its variants(<code>pread</code>, <code>preadv</code> etc&hellip;) use <code>read(2)</code> and <code>write(2)</code> for reading and writing. Kernel will copy the required read data in the process address space and returns. If the requested data is available in page cache, kernel will return the data from page cache immediately. If not, blocks the thread and requests the disk to fetch the requested data. Once the data is available, thread is resumed and the data is returned. For writes, it just simply puts the data into page cache and returns. The data is later pushed to disk. If the page cache is full, thread is blocked and write is done to disk and then resumed.</p>
-
 <h2 id="mmap">MMAP:</h2>
-
 <p>In memory map, the application address space is mapped to the page cache. During the read, if cache hit, the data is taken directly without copying and bypassing kernel entirely. If cache miss, thread is blocked and data is requested from the disk. Once received, it maps the page cache to application address space and returns. For writes, its directly written to page cache and disk write is done later. If the page cache is full, blocked write to disk.</p>
-
-<h2 id="direct-i-o-dio">Direct I/O (DIO):</h2>
-
+<h2 id="direct-io-dio">Direct I/O (DIO):</h2>
 <p>Both the above methods defer the scheduling to kernel at a later point. If the application wishes to control the scheduling, it can use the <code>O_DIRECT</code> flag which will block the thread for read/write from/to disk. Here the cache is completely bypassed. Furthermore, disk controller will copy the contents to application space bypassing kernel.</p>
-
-<h2 id="asynchronous-direct-i-o">Asynchronous Direct I/O:</h2>
-
+<h2 id="asynchronous-direct-io">Asynchronous Direct I/O:</h2>
 <p>Similar to DIO but the thread will not be blocked. Once submitted to <code>io_submit</code>, another thread <code>io_getevents()</code> will wait on the operations to be completed and collects the data. Again, page cache is bypassed and disk controller copies the data directly into application space.</p>
-
 <h2 id="advantages-and-disadvantages">Advantages and Disadvantages:</h2>
-
 <h3 id="cache-control">Cache-Control:</h3>
-
 <p>For the Read/Write and MMAP, cache plays an important role in retrieving the data. The cache is fully managed by kernel and applications has limited say on how the data is saved to file or which page in the cache should be evicted if there is no space.
 The advantage of kernel managing the cache is that, a lot of time, effort and research went into to optimizing those algorithms.
 The disadvantage is that, these algorithms are general purpose and hence, application specific optimizations are not possible.</p>
-
 <h3 id="copying">Copying:</h3>
-
 <p>For the first method, kernel copies the data from page cache to application space and back. But with MMAP, kernel is completely bypassed and data is is directly copied to application space from cache page. This works well when the storage size and ram size ratio is close to 1:1.
 But if the storage size and RAM ratio is way high i.e.. 100:1, once the page is cached, due to smaller ram size, another page must be evicted from the cache if there is no space. Also, MMAP requires 0.2% size of storage size for page tables. So, when the page is evicted from the cache, kernel has to re-scan the page tables for inactive pages. If the storage size is higher, so does the Page table. Ex: 100:1 leads to 20% of the storage size.</p>
-
-<h3 id="i-o-scheduling">I/O scheduling:</h3>
-
-<p>With Read/Write and MMAP, kernel is responsible for I/O operations and the application has no control over it. This leads to problems like:
-1. When kernel decides to do larger writes, all the read I/O might get blocked.
-2. Kernel cannot distinguish between important and un-important tasks leading to background tasks overwhelming and there by increased latencies for foreground tasks.</p>
-
+<h3 id="io-scheduling">I/O scheduling:</h3>
+<p>With Read/Write and MMAP, kernel is responsible for I/O operations and the application has no control over it. This leads to problems like:</p>
+<ol>
+<li>When kernel decides to do larger writes, all the read I/O might get blocked.</li>
+<li>Kernel cannot distinguish between important and un-important tasks leading to background tasks overwhelming and there by increased latencies for foreground tasks.</li>
+</ol>
 <p>With DIO and AIO, this can solved since the complexity can be managed by the applications since they have complete control over I/O scheduling.</p>
-
 <h3 id="thread-scheduling">Thread Scheduling:</h3>
-
 <p>With Write/Read or MMAP, since the I/O scheduling is handled by kernel they will not know what the cache hit rate is and hence, they might start a lot of threads for read and write. This can be inefficient for machines with lesser cores and if there are a lot of cache misses.</p>
-
 <p>With Direct I/O, the application will know when the thread is blocked and limit the threads and with Async Direct I/O, the application will know everything and can limit the threads efficiently based on waiting and available threads.</p>
-
-<h3 id="i-o-alignment">I/O alignment:</h3>
-
+<h3 id="io-alignment">I/O alignment:</h3>
 <p>Kernel usually takes care of assigning correct block size to perform I/O. If kernel is bypassed, the application must ensure the correct block size is chosen.</p>
-
 <h3 id="application-complexity">Application Complexity:</h3>
-
 <p>In the case first two, application complexity will much lesser than the latter two due to custom I/O scheduling algorithms.</p>
-
 <p><em>More info can be found <a href="http://www.scylladb.com/2017/10/05/io-access-methods-scylla/">here</a></em></p>
 </div>
-
-    
-    
-
-    
-
-    
-
-        <h4 class="page-header">Comments</h4>
-
-        <div id="disqus_thread"></div>
-<script>
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "vedhavyas" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-    
 
 </main>
 
         <footer>
-
-            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
-
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
         </footer>
 
+        
+
+        
     </body>
 
 </html>

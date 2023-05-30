@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vedhavyas Singareddi</title>
@@ -6,11 +6,7 @@
     <description>Recent content on Vedhavyas Singareddi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Oct 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://vedhavyas.com/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 08 Oct 2017 00:00:00 +0000</lastBuildDate><atom:link href="http://vedhavyas.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cuckoo Filter</title>
       <link>http://vedhavyas.com/projects/cuckoo-filter/</link>
@@ -81,7 +77,7 @@
       
       <guid>http://vedhavyas.com/posts/different_io_methods_for_linux/</guid>
       <description>Different Access I/O methods for Linux Types of Access:
- Read/Write MMAP Direct I/O Read/Write (DIO) Asynchronous Direct I/O Read/Write(ADIO)  Read/Write: Traditional Read/Write and its variants(pread, preadv etc&amp;hellip;) use read(2) and write(2) for reading and writing. Kernel will copy the required read data in the process address space and returns. If the requested data is available in page cache, kernel will return the data from page cache immediately. If not, blocks the thread and requests the disk to fetch the requested data.</description>
+Read/Write MMAP Direct I/O Read/Write (DIO) Asynchronous Direct I/O Read/Write(ADIO) Read/Write: Traditional Read/Write and its variants(pread, preadv etc&amp;hellip;) use read(2) and write(2) for reading and writing. Kernel will copy the required read data in the process address space and returns. If the requested data is available in page cache, kernel will return the data from page cache immediately. If not, blocks the thread and requests the disk to fetch the requested data.</description>
     </item>
     
     <item>
@@ -90,7 +86,7 @@
       <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>http://vedhavyas.com/posts/distributed_sys_for_fun_profit/</guid>
-      <description>Distributed systems for Fun and Profit Partitioning:  Divide data into smaller independent subsets thereby reducing impact of dataset growth. Improves performance by limiting the amount of data to be examined and locating required data within the subset Improves availability as the nodes can fail independently Partition is very application specific  Replication:  Copies of same data over multiple machines to make available more bandwidth and computation Provides more availability as nodes can fail independently Since there will be multiple copies of a Data, need for good consistency model is required.</description>
+      <description>Distributed systems for Fun and Profit Partitioning: Divide data into smaller independent subsets thereby reducing impact of dataset growth. Improves performance by limiting the amount of data to be examined and locating required data within the subset Improves availability as the nodes can fail independently Partition is very application specific Replication: Copies of same data over multiple machines to make available more bandwidth and computation Provides more availability as nodes can fail independently Since there will be multiple copies of a Data, need for good consistency model is required.</description>
     </item>
     
     <item>
@@ -99,7 +95,7 @@
       <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>http://vedhavyas.com/posts/networking_in_go/</guid>
-      <description>Architecture  Network protocols  ISO OSI - Open systems interconnect  Application Presentation Session Transport Network Data Link Physical  TCP/IP - Transmission control/ Internet Protocol  Application (Application, presentation, session) TCP / UDP (transport) IP (Network) H/w interface (Data Link, Physical)  Other protocols include  Bluetooth WiFi USB Firewire   Gateways  Repeater operates at physical layer and copies data from one subnet to another A bridge operates at Data Link layer and copies frames between networks Router operates at transport layer and not only moves data between networks but also decides on route  Flow  Each layer add a header to the packet from top to bottom Once received, each header is removed at the specific layer  Connection Models  Connection oriented  Single connection is used to transfer packets from one network to other Once done, connection is closed Ex: Telephone conversation TCP  Connectionless  Each transfer is sent independently Ex: ordinary mail IP Connection networks are built over connection less.</description>
+      <description>Architecture Network protocols ISO OSI - Open systems interconnect Application Presentation Session Transport Network Data Link Physical TCP/IP - Transmission control/ Internet Protocol Application (Application, presentation, session) TCP / UDP (transport) IP (Network) H/w interface (Data Link, Physical) Other protocols include Bluetooth WiFi USB Firewire Gateways Repeater operates at physical layer and copies data from one subnet to another A bridge operates at Data Link layer and copies frames between networks Router operates at transport layer and not only moves data between networks but also decides on route Flow Each layer add a header to the packet from top to bottom Once received, each header is removed at the specific layer Connection Models Connection oriented Single connection is used to transfer packets from one network to other Once done, connection is closed Ex: Telephone conversation TCP Connectionless Each transfer is sent independently Ex: ordinary mail IP Connection networks are built over connection less.</description>
     </item>
     
     <item>
@@ -108,7 +104,7 @@
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>http://vedhavyas.com/posts/did-you-know-2/</guid>
-      <description>In the Soviet era Russia your land could be transferred to others by the state and hence was not private property. The .COM TLD was one of the first created in 1985 Root name servers  There are 13 root name server around the world operated by 12 independent organisations Each name server starts with [name].root-servers.net, with name replaced with any of chars including [a-m] Even though there are 13 root name servers, each of the 13 organisations that maintain these servers deploys multiple physical servers around the globe This basically means, there is load balancer for each root name server before all the physical servers deployed in different locations Infrastructure TLDs: .</description>
+      <description>In the Soviet era Russia your land could be transferred to others by the state and hence was not private property. The .COM TLD was one of the first created in 1985 Root name servers There are 13 root name server around the world operated by 12 independent organisations Each name server starts with [name].root-servers.net, with name replaced with any of chars including [a-m] Even though there are 13 root name servers, each of the 13 organisations that maintain these servers deploys multiple physical servers around the globe This basically means, there is load balancer for each root name server before all the physical servers deployed in different locations Infrastructure TLDs: .</description>
     </item>
     
     <item>
@@ -120,7 +116,7 @@
       <description>Note: If you find any issues in the post, let me know in the comments section
 This is a short post how DNS works. Prefer more comical learning, then go here - https://howdns.works/
 So what happens when you type in a website address? User entered address https://vedhavyas.com. Browser needs to resolve this address to an public IP address.
- Browser cache  Browser check its local cache for an IP address that maps to given website address If found, call the IP address to serve the request.</description>
+Browser cache Browser check its local cache for an IP address that maps to given website address If found, call the IP address to serve the request.</description>
     </item>
     
     <item>
@@ -129,7 +125,7 @@ So what happens when you type in a website address? User entered address https:/
       <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>http://vedhavyas.com/posts/did-you-know-chapter-1/</guid>
-      <description>The first internetwork message sent was “lo”, first 2 letters in “login”, since the receiving system crashed after “lo”. Circuit Switching Vs Packet Switching  Circuit Switching  The data is transferred in 3 phases  Connection established Data Transfer Connection Released  Each data unit knows the entire path since the path the connection is explicitly established for this transfer Hence, this is very reliable The data unit is processed at the Receiving end The delay between data unit is uniform But wastage of lots of resources  Packet Switching  Data is transferred directly Packet only know the end destination but the intermediate nodes may change Its not very reliable Data is processed at intermediate nodes as well as destination node The delay between data units is not uniform But very less resource wastage   In packet switching, due to less reliability of the transfer, we end up doing acknowledgements to and fro.</description>
+      <description>The first internetwork message sent was “lo”, first 2 letters in “login”, since the receiving system crashed after “lo”. Circuit Switching Vs Packet Switching Circuit Switching The data is transferred in 3 phases Connection established Data Transfer Connection Released Each data unit knows the entire path since the path the connection is explicitly established for this transfer Hence, this is very reliable The data unit is processed at the Receiving end The delay between data unit is uniform But wastage of lots of resources Packet Switching Data is transferred directly Packet only know the end destination but the intermediate nodes may change Its not very reliable Data is processed at intermediate nodes as well as destination node The delay between data units is not uniform But very less resource wastage In packet switching, due to less reliability of the transfer, we end up doing acknowledgements to and fro.</description>
     </item>
     
     <item>
@@ -139,7 +135,7 @@ So what happens when you type in a website address? User entered address https:/
       
       <guid>http://vedhavyas.com/posts/regex/</guid>
       <description>Note: If you find any issues in the post, do let me know in the comments section.
-Regular Expressions  It is not a Programming language Everything is a character  Character classes dot class  . matches every character except line breaks.  match Any  [\s\S] matches every character including line breaks.  word  \w matches low ascii characters - alphanumeric and underscore equivalent to [a-zA-Z0-9_]  not word  \W matches anything other than a word equivalent to [^a-zA-Z0-9_]  digit  \d matches any digit from 0 to 9 equivalent to [0-9]  not digit  \D matches any character other than digit equivalent to [^0-9]  space  \s matches spaces, tabs, line breaks  not space  \S matches any other than space, tabs, line breaks  character set  [] matches any character in the set  example  expression: [aeiou]</description>
+Regular Expressions It is not a Programming language Everything is a character Character classes dot class . matches every character except line breaks. match Any [\s\S] matches every character including line breaks. word \w matches low ascii characters - alphanumeric and underscore equivalent to [a-zA-Z0-9_] not word \W matches anything other than a word equivalent to [^a-zA-Z0-9_] digit \d matches any digit from 0 to 9 equivalent to [0-9] not digit \D matches any character other than digit equivalent to [^0-9] space \s matches spaces, tabs, line breaks not space \S matches any other than space, tabs, line breaks character set [] matches any character in the set example expression: [aeiou]</description>
     </item>
     
   </channel>

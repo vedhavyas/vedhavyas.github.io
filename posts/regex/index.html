@@ -2,32 +2,15 @@
 <html lang="en-us">
     <head>
         
-        <meta itemprop="name" content="Vedhavyas Singareddi">
-        <meta itemprop="description" content="Distributed Systems Engineer. Gopher. Ployglot. Cyclist">
-        <meta itemprop="image" content="https://i.imgur.com/OXDc3lb.jpg">
-        <meta name="google-site-verification" content="wjvbnnw0onCDMBoFp3WxWViLzY_L0sM89J2eDVfLKSg" />
-
-        
-        <meta property="og:url" content="https://vedhavyas.com">
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="Vedhavyas Singareddi">
-        <meta property="og:description" content="Distributed Systems Engineer. Gopher. Ployglot. Cyclist">
-        <meta property="og:image" content="https://i.imgur.com/OXDc3lb.jpg">
-
-        
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Vedhavyas Singareddi">
-        <meta name="twitter:description" content="Distributed Systems Engineer. Gopher. Ployglot. Cyclist">
-        <meta name="twitter:image" content="https://i.imgur.com/OXDc3lb.jpg">
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
         <title>Regular Expressions</title>
+        
         <style>
 
     html body {
-        font-family: Raleway, sans-serif;
+        font-family: 'Raleway', sans-serif;
         background-color: white;
     }
 
@@ -39,7 +22,7 @@
 </style>
 
 
-<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="http://vedhavyas.com/css/main.css">
 
 
 
@@ -48,20 +31,27 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
 
- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"> 
 
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
 
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
  
 
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-
-     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>
+    
     <script>hljs.initHighlightingOnLoad();</script>
 
 
@@ -69,37 +59,40 @@
 
 
 
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 
 <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
- <meta name="generator" content="Hugo 0.26" />
+ <meta name="generator" content="Hugo 0.112.5">
+        
+
+        
+
+        
+            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+
+        
+
     </head>
 
     <body>
+        
 
         <nav class="navbar navbar-default navbar-fixed-top">
-
             <div class="container">
-
                 <div class="navbar-header">
-
                     <a class="navbar-brand visible-xs" href="#">Regular Expressions</a>
-
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-
                 </div>
-
                 <div class="collapse navbar-collapse">
-
                     
                         <ul class="nav navbar-nav">
                             
@@ -115,341 +108,244 @@
                             
                         </ul>
                     
-
                     
                         <ul class="nav navbar-nav navbar-right">
                             
-                                <li class="navbar-icon"><a href="mailto:vedhavyas@vedhavyas.com"><i class="fa fa-envelope-o"></i></a></li>
+                                <li class="navbar-icon"><a href="mailto:vedhavyas@vedhavyas.com"><i class="envelope-o"></i></a></li>
                             
-                                <li class="navbar-icon"><a href="https://github.com/vedhavyas/"><i class="fa fa-github"></i></a></li>
+                                <li class="navbar-icon"><a href="https://github.com/vedhavyas/"><i class="github"></i></a></li>
                             
-                                <li class="navbar-icon"><a href="https://twitter.com/Svedhavyas/"><i class="fa fa-twitter"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/vedhavyas/"><i class="fa fa-linkedin"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://stackoverflow.com/users/3563197/vedhavyas"><i class="fa fa-stack-overflow"></i></a></li>
+                                <li class="navbar-icon"><a href="https://stackoverflow.com/users/3563197/vedhavyas"><i class="stack-overflow"></i></a></li>
                             
                         </ul>
                     
-
                 </div>
-
             </div>
-
         </nav>
 
 
 <main>
 
-    <div class="item">
-
-    
-    
-
-    
-    
-
-    <h4><a href="/posts/regex/">Regular Expressions</a></h4>
-    <h5>August 21, 2017</h5>
-     <kbd class="item-tag">regex</kbd> 
-
-</div>
+    <div>
+        <h2>Regular Expressions</h2>
+        <h5></h5>
+        
+<a href="http://vedhavyas.com/tags/regex"><kbd class="item-tag">regex</kbd></a>
 
 
-    <br> <div class="text-justify">
+    </div>
 
-<p><em>Note: If you find any issues in the post, do let me know in the comments section.</em></p>
-
+    <div align="start" class="content"><p><em>Note: If you find any issues in the post, do let me know in the comments section.</em></p>
 <h1 id="regular-expressions">Regular Expressions</h1>
-
 <ul>
 <li>It is not a Programming language</li>
 <li>Everything is a character</li>
 </ul>
-
 <h2 id="character-classes">Character classes</h2>
-
 <h3 id="dot-class">dot class</h3>
-
 <ul>
 <li><code>.</code></li>
 <li>matches every character except line breaks.</li>
 </ul>
-
 <h3 id="match-any">match Any</h3>
-
 <ul>
 <li><code>[\s\S]</code></li>
 <li>matches every character including line breaks.</li>
 </ul>
-
 <h3 id="word">word</h3>
-
 <ul>
 <li><code>\w</code></li>
 <li>matches low ascii characters - alphanumeric and underscore</li>
 <li>equivalent to <code>[a-zA-Z0-9_]</code></li>
 </ul>
-
 <h3 id="not-word">not word</h3>
-
 <ul>
 <li><code>\W</code></li>
 <li>matches anything other than a word</li>
 <li>equivalent to <code>[^a-zA-Z0-9_]</code></li>
 </ul>
-
 <h3 id="digit">digit</h3>
-
 <ul>
 <li><code>\d</code></li>
 <li>matches any digit from 0 to 9</li>
 <li>equivalent to <code>[0-9]</code></li>
 </ul>
-
 <h2 id="not-digit">not digit</h2>
-
 <ul>
 <li><code>\D</code></li>
 <li>matches any character other than digit</li>
 <li>equivalent to <code>[^0-9]</code></li>
 </ul>
-
 <h2 id="space">space</h2>
-
 <ul>
 <li><code>\s</code></li>
 <li>matches spaces, tabs, line breaks</li>
 </ul>
-
 <h3 id="not-space">not space</h3>
-
 <ul>
 <li><code>\S</code></li>
 <li>matches any other than space, tabs, line breaks</li>
 </ul>
-
 <h3 id="character-set">character set</h3>
-
 <ul>
 <li><code>[]</code></li>
 <li>matches any character in the set</li>
 </ul>
-
 <h4 id="example">example</h4>
-
 <blockquote>
 <p><em>expression:</em> <code>[aeiou]</code></p>
-
+</blockquote>
+<blockquote>
 <p><em>phrase:</em> glib jocks vex dwarves!</p>
-
+</blockquote>
+<blockquote>
 <p><em>result:</em> gl<code>i</code>b j<code>o</code>cks v<code>e</code>x dw<code>a</code>rv<code>e</code>s!</p>
 </blockquote>
-
 <h3 id="negated-character-set">negated character set</h3>
-
 <ul>
 <li><code>[^]</code></li>
 <li>does not match the characters in the set</li>
 </ul>
-
 <h4 id="example-1">example</h4>
-
 <blockquote>
 <p><em>expression:</em> <code>[aeiou]</code></p>
-
-<p><em>phrase:</em> glib jocks vex dwarves!</p>
-
-<p><em>result:</em> <code>g</code><code>l</code>i<code>b</code> <code>j</code>o<code>c</code><code>k</code><code>s</code> <code>v</code>e<code>x</code> <code>d</code><code>w</code>a<code>r</code><code>v</code>e<code>s</code><code>!</code></p>
 </blockquote>
-
+<blockquote>
+<p><em>phrase:</em> glib jocks vex dwarves!</p>
+</blockquote>
+<blockquote>
+<p><em>result:</em> <code>g``l</code>i<code>b</code> <code>j</code>o<code>c``k``s</code> <code>v</code>e<code>x</code> <code>d``w</code>a<code>r``v</code>e<code>s``!</code></p>
+</blockquote>
 <h3 id="range-character-set">range character set</h3>
-
 <ul>
 <li><code>[a-z]</code></li>
 <li>matches any character between the token mentions inclusive</li>
 </ul>
-
 <h4 id="example-2">example</h4>
-
 <blockquote>
 <p><em>expression:</em> <code>[g-i]</code></p>
-
-<p><em>phrase:</em> abcdefghijklmnopqrstuvwxyz</p>
-
-<p><em>result:</em> abcdef<code>g</code><code>h</code><code>i</code>jklmnopqrstuvwxyz</p>
 </blockquote>
-
+<blockquote>
+<p><em>phrase:</em> abcdefghijklmnopqrstuvwxyz</p>
+</blockquote>
+<blockquote>
+<p><em>result:</em> abcdef<code>g``h``i</code>jklmnopqrstuvwxyz</p>
+</blockquote>
 <h2 id="anchor-tags">Anchor tags</h2>
-
 <ul>
 <li>Using both will lead to exact word match</li>
 </ul>
-
 <h3 id="beginning">beginning</h3>
-
 <ul>
 <li><code>^</code></li>
 <li>marks the beginning of the string or beginning of the line if multiline is enabled</li>
 </ul>
-
 <h3 id="ending">ending</h3>
-
 <ul>
 <li><code>$</code></li>
 <li>marks the end of the strings or end of the line if multiline is enabled</li>
 </ul>
-
 <h2 id="groups">Groups</h2>
-
 <h3 id="capturing-group">capturing group</h3>
-
 <ul>
 <li><code>()</code></li>
 <li>groups multiple tokens for extracting a substring or back referencing</li>
 </ul>
-
 <h3 id="non-capturing-group">non-capturing group</h3>
-
 <ul>
 <li><code>(?:)</code></li>
 <li>groups multiple tokens but does not form a group</li>
 </ul>
-
-<h2 id="quantifiers-alternations">Quantifiers &amp; Alternations</h2>
-
+<h2 id="quantifiers--alternations">Quantifiers &amp; Alternations</h2>
 <h3 id="plus">plus</h3>
-
 <ul>
 <li><code>+</code></li>
 <li>matches one or more preceding tokens</li>
 </ul>
-
 <h4 id="example-3">example</h4>
-
 <blockquote>
 <p><em>expression:</em> <code>Fo+</code></p>
-
-<p><em>phrase:</em> abcdefghijklmnopqrstuvwxyz</p>
-
-<p><em>result:</em> abcdef<code>g</code><code>h</code><code>i</code>jklmnopqrstuvwxyz</p>
 </blockquote>
-
+<blockquote>
+<p><em>phrase:</em> abcdefghijklmnopqrstuvwxyz</p>
+</blockquote>
+<blockquote>
+<p><em>result:</em> abcdef<code>g``h``i</code>jklmnopqrstuvwxyz</p>
+</blockquote>
 <h3 id="star">star</h3>
-
 <ul>
 <li><code>*</code></li>
 <li>matches 0 or more preceding characters</li>
 </ul>
-
 <h4 id="example-4">example</h4>
-
 <blockquote>
 <p><em>expression:</em> <code>Fo*</code></p>
-
+</blockquote>
+<blockquote>
 <p>matches</p>
-
-<pre><code>Fo
+</blockquote>
+<pre tabindex="0"><code>Fo
 Foo
 Fooooo
 Foooooooo
-</code></pre>
-</blockquote>
-
-<h3 id="alternation">alternation</h3>
-
+</code></pre><h3 id="alternation">alternation</h3>
 <ul>
 <li><code>|</code></li>
 <li>acts like Boolean OR</li>
 <li>matches before or after tokens</li>
 </ul>
-
 <h4 id="example-5">example</h4>
-
 <blockquote>
 <p><em>expression:</em> <code>b(a|e|u)d</code></p>
-
+</blockquote>
+<blockquote>
 <p><em>phrase:</em> bad bud bod bed bid</p>
-
+</blockquote>
+<blockquote>
 <p><em>matches:</em> <code>bad</code> <code>bud</code> bod <code>bed</code> bid</p>
 </blockquote>
-
 <h3 id="optional">optional</h3>
-
 <ul>
 <li><code>?</code></li>
 <li>matches 0 or 1 of the preceding tokens essentially making it optional</li>
 </ul>
-
 <h4 id="example-6">example</h4>
-
 <blockquote>
 <p><em>expression:</em> <code>colou?r</code></p>
-
+</blockquote>
+<blockquote>
 <p><em>phrase:</em> color colour</p>
-
+</blockquote>
+<blockquote>
 <p><em>matches:</em> <code>color</code> <code>colour</code></p>
 </blockquote>
-
 <h3 id="quantifiers">quantifiers</h3>
-
 <ul>
 <li><code>{3}</code> matches preceding character to exactly 3 times</li>
 <li><code>{1,3}</code> matches preceding character between 1 and 3 inclusive</li>
 <li><code>{3,}</code> matches preceding character 3 or more times</li>
 </ul>
-
 <h4 id="example-7">example</h4>
-
 <blockquote>
 <p><em>expression:</em> <code>be{2,4}</code></p>
-
+</blockquote>
+<blockquote>
 <p><em>phrase:</em> be beeee beeeee</p>
-
+</blockquote>
+<blockquote>
 <p><em>matches:</em> be <code>beeee</code> <code>beeee</code>e</p>
 </blockquote>
 </div>
 
-    
-    
-
-    
-
-    
-
-        <h4 class="page-header">Comments</h4>
-
-        <div id="disqus_thread"></div>
-<script>
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "vedhavyas" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-    
-
 </main>
 
         <footer>
-
-            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
-
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
         </footer>
 
+        
+
+        
     </body>
 
 </html>

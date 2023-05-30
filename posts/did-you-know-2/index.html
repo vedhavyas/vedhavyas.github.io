@@ -2,32 +2,15 @@
 <html lang="en-us">
     <head>
         
-        <meta itemprop="name" content="Vedhavyas Singareddi">
-        <meta itemprop="description" content="Distributed Systems Engineer. Gopher. Ployglot. Cyclist">
-        <meta itemprop="image" content="https://i.imgur.com/OXDc3lb.jpg">
-        <meta name="google-site-verification" content="wjvbnnw0onCDMBoFp3WxWViLzY_L0sM89J2eDVfLKSg" />
-
-        
-        <meta property="og:url" content="https://vedhavyas.com">
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="Vedhavyas Singareddi">
-        <meta property="og:description" content="Distributed Systems Engineer. Gopher. Ployglot. Cyclist">
-        <meta property="og:image" content="https://i.imgur.com/OXDc3lb.jpg">
-
-        
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Vedhavyas Singareddi">
-        <meta name="twitter:description" content="Distributed Systems Engineer. Gopher. Ployglot. Cyclist">
-        <meta name="twitter:image" content="https://i.imgur.com/OXDc3lb.jpg">
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
         <title>Did You Know: Chapter 2</title>
+        
         <style>
 
     html body {
-        font-family: Raleway, sans-serif;
+        font-family: 'Raleway', sans-serif;
         background-color: white;
     }
 
@@ -39,7 +22,7 @@
 </style>
 
 
-<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="http://vedhavyas.com/css/main.css">
 
 
 
@@ -48,20 +31,27 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
 
- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"> 
 
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
 
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
  
 
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-
-     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>
+    
     <script>hljs.initHighlightingOnLoad();</script>
 
 
@@ -69,37 +59,40 @@
 
 
 
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 
 <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
- <meta name="generator" content="Hugo 0.26" />
+ <meta name="generator" content="Hugo 0.112.5">
+        
+
+        
+
+        
+            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+
+        
+
     </head>
 
     <body>
+        
 
         <nav class="navbar navbar-default navbar-fixed-top">
-
             <div class="container">
-
                 <div class="navbar-header">
-
                     <a class="navbar-brand visible-xs" href="#">Did You Know: Chapter 2</a>
-
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-
                 </div>
-
                 <div class="collapse navbar-collapse">
-
                     
                         <ul class="nav navbar-nav">
                             
@@ -115,131 +108,92 @@
                             
                         </ul>
                     
-
                     
                         <ul class="nav navbar-nav navbar-right">
                             
-                                <li class="navbar-icon"><a href="mailto:vedhavyas@vedhavyas.com"><i class="fa fa-envelope-o"></i></a></li>
+                                <li class="navbar-icon"><a href="mailto:vedhavyas@vedhavyas.com"><i class="envelope-o"></i></a></li>
                             
-                                <li class="navbar-icon"><a href="https://github.com/vedhavyas/"><i class="fa fa-github"></i></a></li>
+                                <li class="navbar-icon"><a href="https://github.com/vedhavyas/"><i class="github"></i></a></li>
                             
-                                <li class="navbar-icon"><a href="https://twitter.com/Svedhavyas/"><i class="fa fa-twitter"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/vedhavyas/"><i class="fa fa-linkedin"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://stackoverflow.com/users/3563197/vedhavyas"><i class="fa fa-stack-overflow"></i></a></li>
+                                <li class="navbar-icon"><a href="https://stackoverflow.com/users/3563197/vedhavyas"><i class="stack-overflow"></i></a></li>
                             
                         </ul>
                     
-
                 </div>
-
             </div>
-
         </nav>
 
 
 <main>
 
-    <div class="item">
+    <div>
+        <h2>Did You Know: Chapter 2</h2>
+        <h5></h5>
+        
+<a href="http://vedhavyas.com/tags/tld"><kbd class="item-tag">tld</kbd></a>
 
-    
-    
+<a href="http://vedhavyas.com/tags/cmd"><kbd class="item-tag">cmd</kbd></a>
 
-    
-    
+<a href="http://vedhavyas.com/tags/linux"><kbd class="item-tag">linux</kbd></a>
 
-    <h4><a href="/posts/did-you-know-2/">Did You Know: Chapter 2</a></h4>
-    <h5>September 27, 2017</h5>
-     <kbd class="item-tag">tld</kbd>  <kbd class="item-tag">cmd</kbd>  <kbd class="item-tag">linux</kbd>  <kbd class="item-tag">tgz</kbd> 
-
-</div>
+<a href="http://vedhavyas.com/tags/tgz"><kbd class="item-tag">tgz</kbd></a>
 
 
-    <br> <div class="text-justify"><ol>
+    </div>
+
+    <div align="start" class="content"><ol>
 <li>In the Soviet era Russia your land could be transferred to others by the state and hence was not private property.</li>
 <li>The .COM TLD was one of the first created in 1985</li>
 <li>Root name servers
-
 <ol>
 <li>There are 13 root name server around the world operated by 12 independent organisations</li>
 <li>Each name server starts with [name].root-servers.net, with name replaced with any of chars including [a-m]</li>
 <li>Even though there are 13 root name servers, each of the 13 organisations that maintain these servers deploys multiple physical servers around the globe</li>
 <li>This basically means, there is load balancer for each root name server before all the physical servers deployed in different locations</li>
 <li>Infrastructure TLDs: .ARPA, mostly used for reverse DNS lookups.</li>
-</ol></li>
+</ol>
+</li>
 <li>International charges to credit-card accounts are cleared per country basis. And charges made in different countries are reconciled periodically. Thus bank balance can be different in different countries</li>
 <li>DNA remains in the nucleus, while RNA can enter the far reaches of the cell to carry out DNA&rsquo;s instructions.</li>
 <li><code>readlink -f file.txt</code> will fetch the full path of <code>file.txt</code></li>
 <li>List contents of tar gz and fetch only one file
-
 <ol>
 <li>Tar tf file.tgz</li>
 <li>Tar-xf file.tgz filename</li>
-</ol></li>
+</ol>
+</li>
 <li>Nice trace route - <code>mtr google.com</code></li>
 <li>Print text ad infinitum
-
 <ol>
 <li><code>yes</code> prints yes infinitely</li>
 <li><code>yes hello</code> prints hello infinitely</li>
-</ol></li>
+</ol>
+</li>
 <li><code>w</code> prints who is logged in</li>
 <li><code>ls | nl</code> prepends line number</li>
 <li><code>tac file</code> backwards of <code>cat</code> prints from end to start</li>
 <li>Run a command everytime file is modified
-
 <ol>
 <li><code>while inotifywait -e close_write document.tex;do;make;done</code></li>
-</ol></li>
+</ol>
+</li>
 <li>Keep program running after leaving ssh
-
 <ol>
 <li>Nohup ./program &amp;</li>
-</ol></li>
+</ol>
+</li>
 </ol>
 </div>
-
-    
-    
-
-    
-
-    
-
-        <h4 class="page-header">Comments</h4>
-
-        <div id="disqus_thread"></div>
-<script>
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "vedhavyas" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-    
 
 </main>
 
         <footer>
-
-            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
-
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
         </footer>
 
+        
+
+        
     </body>
 
 </html>

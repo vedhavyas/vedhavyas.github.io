@@ -1,384 +1,186 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>http://vedhavyas.com/projects/cuckoo-filter/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://vedhavyas.com/projects/scrape/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://vedhavyas.com/projects/queue/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://vedhavyas.com/projects/min-binary-heap/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://vedhavyas.com/projects/oauth2_central/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://vedhavyas.com/projects/node-search/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://vedhavyas.com/projects/machine-learning/</loc>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/posts/different_io_methods_for_linux/</loc>
-    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/posts/distributed_sys_for_fun_profit/</loc>
-    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/posts/networking_in_go/</loc>
-    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/posts/did-you-know-2/</loc>
-    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/posts/how-dns-works/</loc>
-    <lastmod>2017-09-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/posts/did-you-know-chapter-1/</loc>
-    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/posts/regex/</loc>
-    <lastmod>2017-08-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/aimd/</loc>
-    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://vedhavyas.com/tags/aio/</loc>
     <lastmod>2017-10-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://vedhavyas.com/tags/async-direct-io/</loc>
     <lastmod>2017-10-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/bloom-filter-alternative/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/buffer-bloat/</loc>
-    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://vedhavyas.com/tags/byzantine-problem/</loc>
     <lastmod>2017-10-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/circuit-switching/</loc>
-    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/circuit-switching-vs-packet-switching/</loc>
-    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/cmd/</loc>
-    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/cuckoo-filter/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>http://vedhavyas.com/posts/different_io_methods_for_linux/</loc>
+    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://vedhavyas.com/tags/dio/</loc>
     <lastmod>2017-10-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://vedhavyas.com/tags/direct-io/</loc>
     <lastmod>2017-10-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>http://vedhavyas.com/posts/distributed_sys_for_fun_profit/</loc>
+    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://vedhavyas.com/tags/distributed-systems/</loc>
     <lastmod>2017-10-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/dns/</loc>
-    <lastmod>2017-09-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/fifo/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/go/</loc>
-    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/golang/</loc>
-    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/graph/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/heap/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/i/o/</loc>
-    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://vedhavyas.com/tags/ip/</loc>
     <lastmod>2017-10-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/knn/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/linux/</loc>
-    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/machine-learning/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://vedhavyas.com/tags/mmap/</loc>
     <lastmod>2017-10-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/name-servers/</loc>
-    <lastmod>2017-09-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/network/</loc>
-    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://vedhavyas.com/tags/networking/</loc>
     <lastmod>2017-10-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/oauth2/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/oauth2-provider/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/oauth2-sso/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>http://vedhavyas.com/posts/networking_in_go/</loc>
+    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://vedhavyas.com/tags/osi/</loc>
     <lastmod>2017-10-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/packet-switching/</loc>
-    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://vedhavyas.com/tags/paxos/</loc>
     <lastmod>2017-10-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/perceptron/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://vedhavyas.com/posts/</loc>
     <lastmod>2017-10-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/probabilistic-data-structures/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/projects/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/queue/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://vedhavyas.com/tags/raft/</loc>
     <lastmod>2017-10-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/read/write/</loc>
-    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/regex/</loc>
-    <lastmod>2017-08-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/root-name-server/</loc>
-    <lastmod>2017-09-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/scrape/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/search/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/sitemap-generator/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/sort/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://vedhavyas.com/tags/</loc>
-    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://vedhavyas.com/tags/tcp/</loc>
     <lastmod>2017-10-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/tgz/</loc>
-    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/tld/</loc>
-    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://vedhavyas.com/tags/tlds/</loc>
-    <lastmod>2017-09-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://vedhavyas.com/tags/udp/</loc>
     <lastmod>2017-10-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://vedhavyas.com/</loc>
     <lastmod>2017-10-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/cmd/</loc>
+    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://vedhavyas.com/posts/did-you-know-2/</loc>
+    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/linux/</loc>
+    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/tgz/</loc>
+    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/tld/</loc>
+    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/dns/</loc>
+    <lastmod>2017-09-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://vedhavyas.com/posts/how-dns-works/</loc>
+    <lastmod>2017-09-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/name-servers/</loc>
+    <lastmod>2017-09-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/root-name-server/</loc>
+    <lastmod>2017-09-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/tlds/</loc>
+    <lastmod>2017-09-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/aimd/</loc>
+    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/buffer-bloat/</loc>
+    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/circuit-switching/</loc>
+    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/circuit-switching-vs-packet-switching/</loc>
+    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://vedhavyas.com/posts/did-you-know-chapter-1/</loc>
+    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/go/</loc>
+    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/golang/</loc>
+    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/network/</loc>
+    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/packet-switching/</loc>
+    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/regex/</loc>
+    <lastmod>2017-08-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://vedhavyas.com/posts/regex/</loc>
+    <lastmod>2017-08-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/bloom-filter-alternative/</loc>
+  </url><url>
+    <loc>http://vedhavyas.com/categories/</loc>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/cuckoo-filter/</loc>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/fifo/</loc>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/graph/</loc>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/heap/</loc>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/i/o/</loc>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/knn/</loc>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/machine-learning/</loc>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/oauth2/</loc>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/oauth2-provider/</loc>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/oauth2-sso/</loc>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/perceptron/</loc>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/probabilistic-data-structures/</loc>
+  </url><url>
+    <loc>http://vedhavyas.com/projects/</loc>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/queue/</loc>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/read/write/</loc>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/scrape/</loc>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/search/</loc>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/sitemap-generator/</loc>
+  </url><url>
+    <loc>http://vedhavyas.com/tags/sort/</loc>
+  </url><url>
     <loc>http://vedhavyas.com/tags/web-scraping/</loc>
-    <priority>0</priority>
   </url>
-  
 </urlset>

@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Regex on Vedhavyas Singareddi</title>
+    <title>regex on Vedhavyas Singareddi</title>
     <link>http://vedhavyas.com/tags/regex/</link>
-    <description>Recent content in Regex on Vedhavyas Singareddi</description>
+    <description>Recent content in regex on Vedhavyas Singareddi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Aug 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://vedhavyas.com/tags/regex/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 21 Aug 2017 00:00:00 +0000</lastBuildDate><atom:link href="http://vedhavyas.com/tags/regex/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Regular Expressions</title>
       <link>http://vedhavyas.com/posts/regex/</link>
@@ -18,7 +14,7 @@
       
       <guid>http://vedhavyas.com/posts/regex/</guid>
       <description>Note: If you find any issues in the post, do let me know in the comments section.
-Regular Expressions  It is not a Programming language Everything is a character  Character classes dot class  . matches every character except line breaks.  match Any  [\s\S] matches every character including line breaks.  word  \w matches low ascii characters - alphanumeric and underscore equivalent to [a-zA-Z0-9_]  not word  \W matches anything other than a word equivalent to [^a-zA-Z0-9_]  digit  \d matches any digit from 0 to 9 equivalent to [0-9]  not digit  \D matches any character other than digit equivalent to [^0-9]  space  \s matches spaces, tabs, line breaks  not space  \S matches any other than space, tabs, line breaks  character set  [] matches any character in the set  example  expression: [aeiou]</description>
+Regular Expressions It is not a Programming language Everything is a character Character classes dot class . matches every character except line breaks. match Any [\s\S] matches every character including line breaks. word \w matches low ascii characters - alphanumeric and underscore equivalent to [a-zA-Z0-9_] not word \W matches anything other than a word equivalent to [^a-zA-Z0-9_] digit \d matches any digit from 0 to 9 equivalent to [0-9] not digit \D matches any character other than digit equivalent to [^0-9] space \s matches spaces, tabs, line breaks not space \S matches any other than space, tabs, line breaks character set [] matches any character in the set example expression: [aeiou]</description>
     </item>
     
   </channel>

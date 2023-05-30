@@ -1,15 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Queue on Vedhavyas Singareddi</title>
+    <title>queue on Vedhavyas Singareddi</title>
     <link>http://vedhavyas.com/tags/queue/</link>
-    <description>Recent content in Queue on Vedhavyas Singareddi</description>
+    <description>Recent content in queue on Vedhavyas Singareddi</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="http://vedhavyas.com/tags/queue/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="http://vedhavyas.com/tags/queue/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Queue</title>
       <link>http://vedhavyas.com/projects/queue/</link>

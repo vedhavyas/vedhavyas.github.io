@@ -1,23 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ip on Vedhavyas Singareddi</title>
+    <title>ip on Vedhavyas Singareddi</title>
     <link>http://vedhavyas.com/tags/ip/</link>
-    <description>Recent content in Ip on Vedhavyas Singareddi</description>
+    <description>Recent content in ip on Vedhavyas Singareddi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Oct 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://vedhavyas.com/tags/ip/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 08 Oct 2017 00:00:00 +0000</lastBuildDate><atom:link href="http://vedhavyas.com/tags/ip/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Networking in Go</title>
       <link>http://vedhavyas.com/posts/networking_in_go/</link>
       <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>http://vedhavyas.com/posts/networking_in_go/</guid>
-      <description>Architecture  Network protocols  ISO OSI - Open systems interconnect  Application Presentation Session Transport Network Data Link Physical  TCP/IP - Transmission control/ Internet Protocol  Application (Application, presentation, session) TCP / UDP (transport) IP (Network) H/w interface (Data Link, Physical)  Other protocols include  Bluetooth WiFi USB Firewire   Gateways  Repeater operates at physical layer and copies data from one subnet to another A bridge operates at Data Link layer and copies frames between networks Router operates at transport layer and not only moves data between networks but also decides on route  Flow  Each layer add a header to the packet from top to bottom Once received, each header is removed at the specific layer  Connection Models  Connection oriented  Single connection is used to transfer packets from one network to other Once done, connection is closed Ex: Telephone conversation TCP  Connectionless  Each transfer is sent independently Ex: ordinary mail IP Connection networks are built over connection less.</description>
+      <description>Architecture Network protocols ISO OSI - Open systems interconnect Application Presentation Session Transport Network Data Link Physical TCP/IP - Transmission control/ Internet Protocol Application (Application, presentation, session) TCP / UDP (transport) IP (Network) H/w interface (Data Link, Physical) Other protocols include Bluetooth WiFi USB Firewire Gateways Repeater operates at physical layer and copies data from one subnet to another A bridge operates at Data Link layer and copies frames between networks Router operates at transport layer and not only moves data between networks but also decides on route Flow Each layer add a header to the packet from top to bottom Once received, each header is removed at the specific layer Connection Models Connection oriented Single connection is used to transfer packets from one network to other Once done, connection is closed Ex: Telephone conversation TCP Connectionless Each transfer is sent independently Ex: ordinary mail IP Connection networks are built over connection less.</description>
     </item>
     
   </channel>
