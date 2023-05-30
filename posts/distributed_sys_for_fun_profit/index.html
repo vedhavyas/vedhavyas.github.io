@@ -1,155 +1,223 @@
 <!DOCTYPE html>
-<html lang="en-us">
-    <head>
-        
+<html lang="en" dir="auto">
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Distributed systems for Fun and Profit</title>
-        
-        <style>
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Distributed systems for Fun and Profit | Vedhavyas Singareddi</title>
+<meta name="keywords" content="distributed-systems, paxos, byzantine-problem, raft">
+<meta name="description" content="Distributed systems for Fun and Profit Partitioning: Divide data into smaller independent subsets thereby reducing impact of dataset growth. Improves performance by limiting the amount of data to be examined and locating required data within the subset Improves availability as the nodes can fail independently Partition is very application specific Replication: Copies of same data over multiple machines to make available more bandwidth and computation Provides more availability as nodes can fail independently Since there will be multiple copies of a Data, need for good consistency model is required.">
+<meta name="author" content="Vedhavyas Singareddi">
+<link rel="canonical" href="http://vedhavyas.com/posts/distributed_sys_for_fun_profit/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://vedhavyas.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://vedhavyas.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://vedhavyas.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://vedhavyas.com/apple-touch-icon.png">
+<link rel="mask-icon" href="http://vedhavyas.com/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-    html body {
-        font-family: 'Raleway', sans-serif;
-        background-color: white;
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Distributed systems for Fun and Profit" />
+<meta property="og:description" content="Distributed systems for Fun and Profit Partitioning: Divide data into smaller independent subsets thereby reducing impact of dataset growth. Improves performance by limiting the amount of data to be examined and locating required data within the subset Improves availability as the nodes can fail independently Partition is very application specific Replication: Copies of same data over multiple machines to make available more bandwidth and computation Provides more availability as nodes can fail independently Since there will be multiple copies of a Data, need for good consistency model is required." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://vedhavyas.com/posts/distributed_sys_for_fun_profit/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2017-10-08T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-10-08T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Distributed systems for Fun and Profit"/>
+<meta name="twitter:description" content="Distributed systems for Fun and Profit Partitioning: Divide data into smaller independent subsets thereby reducing impact of dataset growth. Improves performance by limiting the amount of data to be examined and locating required data within the subset Improves availability as the nodes can fail independently Partition is very application specific Replication: Copies of same data over multiple machines to make available more bandwidth and computation Provides more availability as nodes can fail independently Since there will be multiple copies of a Data, need for good consistency model is required."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "http://vedhavyas.com/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Distributed systems for Fun and Profit",
+      "item": "http://vedhavyas.com/posts/distributed_sys_for_fun_profit/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Distributed systems for Fun and Profit",
+  "name": "Distributed systems for Fun and Profit",
+  "description": "Distributed systems for Fun and Profit Partitioning: Divide data into smaller independent subsets thereby reducing impact of dataset growth. Improves performance by limiting the amount of data to be examined and locating required data within the subset Improves availability as the nodes can fail independently Partition is very application specific Replication: Copies of same data over multiple machines to make available more bandwidth and computation Provides more availability as nodes can fail independently Since there will be multiple copies of a Data, need for good consistency model is required.",
+  "keywords": [
+    "distributed-systems", "paxos", "byzantine-problem", "raft"
+  ],
+  "articleBody": "Distributed systems for Fun and Profit Partitioning: Divide data into smaller independent subsets thereby reducing impact of dataset growth. Improves performance by limiting the amount of data to be examined and locating required data within the subset Improves availability as the nodes can fail independently Partition is very application specific Replication: Copies of same data over multiple machines to make available more bandwidth and computation Provides more availability as nodes can fail independently Since there will be multiple copies of a Data, need for good consistency model is required. Strong Consistency: Lets you program as though no replication is happening Weak Consistency: Leads to low latency and higher availability Abstractions, fundamentally, are fake. Every situation is unique, as is every node. But abstractions make the world manageable: simpler problem statements - free of reality - are much more analytically tractable and provided that we did not ignore anything essential, the solutions are widely applicable.\nA Systems Model: Key Properties\nPrograms run concurrently on independent node No shared memory or share clock Network between may introduce message loss or nondeterminism Implications\nPrograms have fast access to local state but global state maybe outdated Messages can be delayed/lost Programs run concurrently A System model is a set of assumptions about environments and facilities underneath a Distributed System. A robust system model is one that makes the weakest assumptions: any algorithm written for such a system is very tolerant of different environments, since it makes very few and very weak assumptions.\nNodes: Node serves as host to make our program computations and storages and has\nVolatile and non-volatile memory a clock(may not be accurate) ability to run a program Nodes use deterministic algorithms i.e. local computation, local state after computation, and messages sent are determined uniquely by the message received and local state when the message was received.\nMost nodes assume crash-recovery failure model where in nodes can only fail by crashing and can recover at some later point.\nByzantine Fault tolerance: Nodes can misbehave or fail arbitrarily. This is not employed in commercial systems due to its high computations and costs. Communication Links: These are the links that connect nodes and allows each node to send/receive messages. Most of the distributed algorithm books assumes that links follow FIFO for message passing. A Network partition is occurs when the link between nodes is broken but the nodes still remains operational. During this, messages might get lost or delayed indefinitely. Also, the nodes must be treated differently from crashed nodes.\nTime/Order: Each node can receive a same message at a different time due to distances between each node.\nSynchronous System model: Fixed delays Accurate clocks Asynchronous System Models: No reliance on times absent clocks Consensus Problem: Agreement: Every node must agree on same value Integrity: Agreed value mush have been chosen by one of the processes Termination: All process must reach decision Validity: All processes must use the same value Impossibility Results: FLP impossibility is use by those who design the distributed systems CAP theorem result is used by practitioners who want choose a System design to use. FLP result For async system model Assumes Node fails by crashing, network is reliable and unbound on message delay applies Under these, then can exist no algorithm as it cannot decide on message delays there by imposing restrictions on system design CAP theorem Assume network failure than node failure Can simultaneously satisfy 2 of the 3 properties Consistency: Data remain constant across nodes Availability: Node failures doesn’t prevent operational nodes to fail Partition Tolerance: System continues to operate despite message loss due to network/node failure The CA and CP system designs both offer the same consistency model: strong consistency. The only difference is that a CA system cannot tolerate any node failures; a CP system can tolerate up to f faults given 2f+1 nodes in a non-Byzantine failure model (in other words, it can tolerate the failure of a minority f of the nodes as long as majority f+1 stays up). First, that many system designs used in early distributed relational database systems did not take into account partition tolerance (e.g. they were CA designs) Second, that there is a tension between strong consistency and high availability during network partitions . Third, that there is a tension between strong consistency and performance in normal operation. Fourth - and somewhat indirectly - that if we do not want to give up availability during a network partition, then we need to explore whether consistency models other than strong consistency are workable for our purposes. Consistency model A contract between programmer and system, wherein the system guarantees that if the programmer follows some specific rules, the results of operations on the data store will be predictable.\nThe “C” in CAP is “strong consistency” Linearizable Consistency Model: That writes should be instantaneous and post write, all reads should give latest written value Serializable Consistency: applies serial set of operations as long as system doesn’t break any rules at individual nodes and order is same on all nodes Strict serialization: Mix of Linearizable and serializable consistency models Other consistent Models: Client Centric consistency: Client never sees an older version of the Value Usually achieved with Memcache. So when primary node fails, the cached version is served until the other latest version is written to the next primary Eventual Consistency: That client will agree on value after some undefined amount of time given the value is unchanged. How long is eventually ? If going with time stamp as the latest value, any node with wrong clock will give undesired results. Lamport and Vector Clocks: Interesting read at - https://en.wikipedia.org/wiki/Vector_clock Primary/backup replication: Asynchronous primary just waits for update and commit to backup is done async failure at backup —\u003e data loss if the primary fails before ack to client and after updating(not committed) backup Synchronous Primary waits till ack is received from backup Will have a data loss if the backup gives ack but primary fails post backup ack 2PC replication; Most relational DBs use this form This is CA and any partition failures, the system has to wait till the partition recovers. Assumptions - Failures always recover First phase includes just getting an update from backups and backups store it in a temporary area The update is committed in the second(commit) phase. If primary fails, then the backups know to recover Data loss is possible if the data is corrupted during the failover Is latency sensitive due n-n update/ack Partition tolerant consensus algorithms: Paxos Raft Network partition Node failure is different from network partition between nodes It is not possible to discover node failure/network partition Updates can only happen based on the votes Use odd number of patrons to get clear majority votes. System can still handle updates during network partition if (n/2+1) nodes are active Roles System can be designed to have all nodes with single role or separate distinct role Consensus algorithms raft/paxos uses distinct role (master / slave) During normal operations, one is master and rest are acceptors/slave leader is elected at the start and during a failover Epochs A period of normal operation is called Epoch in paxos and term in raft During an epoch, election takes place and leader is designated if not leader is elected, the epoch ends immediately partitioned nodes will have smaller epoch time than current ones and their commands are ignored. ",
+  "wordCount" : "1228",
+  "inLanguage": "en",
+  "datePublished": "2017-10-08T00:00:00Z",
+  "dateModified": "2017-10-08T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Vedhavyas Singareddi"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://vedhavyas.com/posts/distributed_sys_for_fun_profit/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vedhavyas Singareddi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://vedhavyas.com/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
     }
 
-    :root {
-        --accent: black;
-        --border-width:  5px ;
-    }
+</script>
 
-</style>
-
-
-<link rel="stylesheet" href="http://vedhavyas.com/css/main.css">
-
-
-
-
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-
-
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"> 
-
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
- 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>
-    
-    <script>hljs.initHighlightingOnLoad();</script>
-
-
-
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
-<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
- <meta name="generator" content="Hugo 0.112.5">
-        
-
-        
-
-        
-            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        
-
-        
-
-    </head>
-
-    <body>
-        
-
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand visible-xs" href="#">Distributed systems for Fun and Profit</a>
-                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse">
-                    
-                        <ul class="nav navbar-nav">
-                            
-                                <li><a href="/">Home</a></li>
-                            
-                                <li><a href="/posts/">Posts</a></li>
-                            
-                                <li><a href="/projects/">Projects</a></li>
-                            
-                                <li><a href="/tags/">Tags</a></li>
-                            
-                                <li><a href="https://drive.google.com/open?id=0B39uOd0SSzeSeWQwWHo5cDB0OEU">Resume</a></li>
-                            
-                        </ul>
-                    
-                    
-                        <ul class="nav navbar-nav navbar-right">
-                            
-                                <li class="navbar-icon"><a href="mailto:vedhavyas@vedhavyas.com"><i class="envelope-o"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://github.com/vedhavyas/"><i class="github"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://stackoverflow.com/users/3563197/vedhavyas"><i class="stack-overflow"></i></a></li>
-                            
-                        </ul>
-                    
-                </div>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://vedhavyas.com/" accesskey="h" title="Vedhavyas Singareddi (Alt + H)">Vedhavyas Singareddi</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
             </div>
-        </nav>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://vedhavyas.com/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://vedhavyas.com/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://vedhavyas.com/projects/" title="Projects">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://vedhavyas.com/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://drive.google.com/open?id=0B39uOd0SSzeSeWQwWHo5cDB0OEU" title="Resume">
+                    <span>Resume</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
 
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Distributed systems for Fun and Profit
+    </h1>
+    <div class="post-meta"><span title='2017-10-08 00:00:00 +0000 UTC'>October 8, 2017</span>&nbsp;·&nbsp;Vedhavyas Singareddi
 
-<main>
-
-    <div>
-        <h2>Distributed systems for Fun and Profit</h2>
-        <h5></h5>
-        
-<a href="http://vedhavyas.com/tags/distributed-systems"><kbd class="item-tag">distributed-systems</kbd></a>
-
-<a href="http://vedhavyas.com/tags/paxos"><kbd class="item-tag">paxos</kbd></a>
-
-<a href="http://vedhavyas.com/tags/byzantine-problem"><kbd class="item-tag">byzantine-problem</kbd></a>
-
-<a href="http://vedhavyas.com/tags/raft"><kbd class="item-tag">raft</kbd></a>
-
-
-    </div>
-
-    <div align="start" class="content"><h1 id="distributed-systems-for-fun-and-profit">Distributed systems for Fun and Profit</h1>
-<h2 id="partitioning">Partitioning:</h2>
+</div>
+  </header> 
+  <div class="post-content"><h1 id="distributed-systems-for-fun-and-profit">Distributed systems for Fun and Profit<a hidden class="anchor" aria-hidden="true" href="#distributed-systems-for-fun-and-profit">#</a></h1>
+<h2 id="partitioning">Partitioning:<a hidden class="anchor" aria-hidden="true" href="#partitioning">#</a></h2>
 <ol>
 <li>Divide data into smaller independent subsets thereby reducing impact of dataset growth.</li>
 <li>Improves performance by limiting the amount of data to be examined and locating required data within the subset</li>
 <li>Improves availability as the nodes can fail independently</li>
 <li>Partition is very application specific</li>
 </ol>
-<h2 id="replication">Replication:</h2>
+<h2 id="replication">Replication:<a hidden class="anchor" aria-hidden="true" href="#replication">#</a></h2>
 <ol>
 <li>Copies of same data over multiple machines to make available more bandwidth and computation</li>
 <li>Provides more availability as nodes can fail independently</li>
@@ -161,7 +229,7 @@
 </li>
 </ol>
 <p>Abstractions, fundamentally, are fake. Every situation is unique, as is every node. But abstractions make the world manageable: simpler problem statements - free of reality - are much more analytically tractable and provided that we did not ignore anything essential, the solutions are widely applicable.</p>
-<h2 id="a-systems-model">A Systems Model:</h2>
+<h2 id="a-systems-model">A Systems Model:<a hidden class="anchor" aria-hidden="true" href="#a-systems-model">#</a></h2>
 <ol>
 <li>
 <p>Key Properties</p>
@@ -182,7 +250,7 @@
 </ol>
 <p>A System model is a set of assumptions about environments and facilities underneath a Distributed System.
 A robust system model is one that makes the weakest assumptions: any algorithm written for such a system is very tolerant of different environments, since it makes very few and very weak assumptions.</p>
-<h2 id="nodes">Nodes:</h2>
+<h2 id="nodes">Nodes:<a hidden class="anchor" aria-hidden="true" href="#nodes">#</a></h2>
 <p>Node serves as host to make our program computations and storages and has</p>
 <ol>
 <li>Volatile and non-volatile memory</li>
@@ -191,14 +259,14 @@ A robust system model is one that makes the weakest assumptions: any algorithm w
 </ol>
 <p>Nodes use deterministic algorithms i.e. local computation, local state after computation, and messages sent are determined uniquely by the message received and local state when the message was received.</p>
 <p>Most nodes assume crash-recovery failure model where in nodes can only fail by crashing and can recover at some later point.</p>
-<h3 id="byzantine-fault-tolerance">Byzantine Fault tolerance:</h3>
+<h3 id="byzantine-fault-tolerance">Byzantine Fault tolerance:<a hidden class="anchor" aria-hidden="true" href="#byzantine-fault-tolerance">#</a></h3>
 <ol>
 <li>Nodes can misbehave or fail arbitrarily.</li>
 <li>This is not employed in commercial systems due to its high computations and costs.</li>
 </ol>
-<h3 id="communication-links">Communication Links:</h3>
+<h3 id="communication-links">Communication Links:<a hidden class="anchor" aria-hidden="true" href="#communication-links">#</a></h3>
 <p>These are the links that connect nodes and allows each node to send/receive messages. Most of the distributed algorithm books assumes that links follow FIFO for message passing. A Network partition is occurs when the link between nodes is broken but the nodes still remains operational. During this, messages might get lost or delayed indefinitely. Also, the nodes must be treated differently from crashed nodes.</p>
-<h3 id="timeorder">Time/Order:</h3>
+<h3 id="timeorder">Time/Order:<a hidden class="anchor" aria-hidden="true" href="#timeorder">#</a></h3>
 <p>Each node can receive a same message at a different time due to distances between each node.</p>
 <ol>
 <li>Synchronous System model:
@@ -214,25 +282,25 @@ A robust system model is one that makes the weakest assumptions: any algorithm w
 </ol>
 </li>
 </ol>
-<h3 id="consensus-problem">Consensus Problem:</h3>
+<h3 id="consensus-problem">Consensus Problem:<a hidden class="anchor" aria-hidden="true" href="#consensus-problem">#</a></h3>
 <ol>
 <li>Agreement: Every node must agree on same value</li>
 <li>Integrity: Agreed value mush have been chosen by one of the processes</li>
 <li>Termination: All process must reach decision</li>
 <li>Validity: All processes must use the same value</li>
 </ol>
-<h3 id="impossibility-results">Impossibility Results:</h3>
+<h3 id="impossibility-results">Impossibility Results:<a hidden class="anchor" aria-hidden="true" href="#impossibility-results">#</a></h3>
 <ol>
 <li>FLP impossibility is use by those who design the distributed systems</li>
 <li>CAP theorem result is used by practitioners who want choose a System design to use.</li>
 </ol>
-<h4 id="flp-result">FLP result</h4>
+<h4 id="flp-result">FLP result<a hidden class="anchor" aria-hidden="true" href="#flp-result">#</a></h4>
 <ol>
 <li>For async system model</li>
 <li>Assumes Node fails by crashing, network is reliable and unbound on message delay applies</li>
 <li>Under these, then can exist no algorithm as it cannot decide on message delays there by imposing restrictions on system design</li>
 </ol>
-<h4 id="cap-theorem">CAP theorem</h4>
+<h4 id="cap-theorem">CAP theorem<a hidden class="anchor" aria-hidden="true" href="#cap-theorem">#</a></h4>
 <ol>
 <li>Assume network failure than node failure</li>
 <li>Can simultaneously satisfy 2 of the 3 properties
@@ -248,7 +316,7 @@ A robust system model is one that makes the weakest assumptions: any algorithm w
 <li>Third, that there is a tension between strong consistency and performance in normal operation.</li>
 <li>Fourth - and somewhat indirectly - that if we do not want to give up availability during a network partition, then we need to explore whether consistency models other than strong consistency are workable for our purposes.</li>
 </ol>
-<h4 id="consistency-model">Consistency model</h4>
+<h4 id="consistency-model">Consistency model<a hidden class="anchor" aria-hidden="true" href="#consistency-model">#</a></h4>
 <p>A contract between programmer and system, wherein the system guarantees that if the programmer follows some specific rules, the results of operations on the data store will be predictable.</p>
 <ol>
 <li>The “C” in CAP is “strong consistency”</li>
@@ -290,7 +358,7 @@ A robust system model is one that makes the weakest assumptions: any algorithm w
 </ol>
 </li>
 </ol>
-<h2 id="primarybackup-replication">Primary/backup replication:</h2>
+<h2 id="primarybackup-replication">Primary/backup replication:<a hidden class="anchor" aria-hidden="true" href="#primarybackup-replication">#</a></h2>
 <ol>
 <li>Asynchronous
 <ol>
@@ -305,7 +373,7 @@ A robust system model is one that makes the weakest assumptions: any algorithm w
 </ol>
 </li>
 </ol>
-<h3 id="2pc-replication">2PC replication;</h3>
+<h3 id="2pc-replication">2PC replication;<a hidden class="anchor" aria-hidden="true" href="#2pc-replication">#</a></h3>
 <ol>
 <li>Most relational DBs use this form</li>
 <li>This is CA and any partition failures, the system has to wait till the partition recovers.</li>
@@ -315,12 +383,12 @@ A robust system model is one that makes the weakest assumptions: any algorithm w
 <li>Data loss is possible if the data is corrupted during the failover</li>
 <li>Is latency sensitive due n-n update/ack</li>
 </ol>
-<h3 id="partition-tolerant-consensus-algorithms">Partition tolerant consensus algorithms:</h3>
+<h3 id="partition-tolerant-consensus-algorithms">Partition tolerant consensus algorithms:<a hidden class="anchor" aria-hidden="true" href="#partition-tolerant-consensus-algorithms">#</a></h3>
 <ol>
 <li>Paxos</li>
 <li>Raft</li>
 </ol>
-<h4 id="network-partition">Network partition</h4>
+<h4 id="network-partition">Network partition<a hidden class="anchor" aria-hidden="true" href="#network-partition">#</a></h4>
 <ol>
 <li>Node failure is different from network partition between nodes</li>
 <li>It is not possible to discover node failure/network partition</li>
@@ -328,32 +396,103 @@ A robust system model is one that makes the weakest assumptions: any algorithm w
 <li>Use odd number of patrons to get clear majority votes.</li>
 <li>System can still handle updates  during network partition if (n/2+1) nodes are active</li>
 </ol>
-<h4 id="roles">Roles</h4>
+<h4 id="roles">Roles<a hidden class="anchor" aria-hidden="true" href="#roles">#</a></h4>
 <ol>
 <li>System can be designed to have all nodes with single role or separate distinct role</li>
 <li>Consensus algorithms raft/paxos uses distinct role (master / slave)</li>
 <li>During normal operations, one is master and rest are acceptors/slave</li>
 <li>leader is elected at the start and during a failover</li>
 </ol>
-<h4 id="epochs">Epochs</h4>
+<h4 id="epochs">Epochs<a hidden class="anchor" aria-hidden="true" href="#epochs">#</a></h4>
 <ol>
 <li>A period of normal operation is called Epoch in paxos and term in raft</li>
 <li>During an epoch, election takes place and leader is designated</li>
 <li>if not leader is elected, the epoch ends immediately</li>
 <li>partitioned nodes will have smaller epoch time than current ones and their commands are ignored.</li>
 </ol>
-</div>
 
-</main>
 
-        <footer>
-            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
-        </footer>
+  </div>
 
-        
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://vedhavyas.com/tags/distributed-systems/">distributed-systems</a></li>
+      <li><a href="http://vedhavyas.com/tags/paxos/">paxos</a></li>
+      <li><a href="http://vedhavyas.com/tags/byzantine-problem/">byzantine-problem</a></li>
+      <li><a href="http://vedhavyas.com/tags/raft/">raft</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="http://vedhavyas.com/">Vedhavyas Singareddi</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
 
-        
-    </body>
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
 
 </html>
-

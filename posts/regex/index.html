@@ -1,197 +1,274 @@
 <!DOCTYPE html>
-<html lang="en-us">
-    <head>
-        
+<html lang="en" dir="auto">
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Regular Expressions</title>
-        
-        <style>
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Regular Expressions | Vedhavyas Singareddi</title>
+<meta name="keywords" content="regex">
+<meta name="description" content="Note: If you find any issues in the post, do let me know in the comments section.
+Regular Expressions It is not a Programming language Everything is a character Character classes dot class . matches every character except line breaks. match Any [\s\S] matches every character including line breaks. word \w matches low ascii characters - alphanumeric and underscore equivalent to [a-zA-Z0-9_] not word \W matches anything other than a word equivalent to [^a-zA-Z0-9_] digit \d matches any digit from 0 to 9 equivalent to [0-9] not digit \D matches any character other than digit equivalent to [^0-9] space \s matches spaces, tabs, line breaks not space \S matches any other than space, tabs, line breaks character set [] matches any character in the set example expression: [aeiou]">
+<meta name="author" content="Vedhavyas Singareddi">
+<link rel="canonical" href="http://vedhavyas.com/posts/regex/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://vedhavyas.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://vedhavyas.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://vedhavyas.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://vedhavyas.com/apple-touch-icon.png">
+<link rel="mask-icon" href="http://vedhavyas.com/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-    html body {
-        font-family: 'Raleway', sans-serif;
-        background-color: white;
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Regular Expressions" />
+<meta property="og:description" content="Note: If you find any issues in the post, do let me know in the comments section.
+Regular Expressions It is not a Programming language Everything is a character Character classes dot class . matches every character except line breaks. match Any [\s\S] matches every character including line breaks. word \w matches low ascii characters - alphanumeric and underscore equivalent to [a-zA-Z0-9_] not word \W matches anything other than a word equivalent to [^a-zA-Z0-9_] digit \d matches any digit from 0 to 9 equivalent to [0-9] not digit \D matches any character other than digit equivalent to [^0-9] space \s matches spaces, tabs, line breaks not space \S matches any other than space, tabs, line breaks character set [] matches any character in the set example expression: [aeiou]" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://vedhavyas.com/posts/regex/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2017-08-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-08-21T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Regular Expressions"/>
+<meta name="twitter:description" content="Note: If you find any issues in the post, do let me know in the comments section.
+Regular Expressions It is not a Programming language Everything is a character Character classes dot class . matches every character except line breaks. match Any [\s\S] matches every character including line breaks. word \w matches low ascii characters - alphanumeric and underscore equivalent to [a-zA-Z0-9_] not word \W matches anything other than a word equivalent to [^a-zA-Z0-9_] digit \d matches any digit from 0 to 9 equivalent to [0-9] not digit \D matches any character other than digit equivalent to [^0-9] space \s matches spaces, tabs, line breaks not space \S matches any other than space, tabs, line breaks character set [] matches any character in the set example expression: [aeiou]"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "http://vedhavyas.com/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Regular Expressions",
+      "item": "http://vedhavyas.com/posts/regex/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Regular Expressions",
+  "name": "Regular Expressions",
+  "description": "Note: If you find any issues in the post, do let me know in the comments section.\nRegular Expressions It is not a Programming language Everything is a character Character classes dot class . matches every character except line breaks. match Any [\\s\\S] matches every character including line breaks. word \\w matches low ascii characters - alphanumeric and underscore equivalent to [a-zA-Z0-9_] not word \\W matches anything other than a word equivalent to [^a-zA-Z0-9_] digit \\d matches any digit from 0 to 9 equivalent to [0-9] not digit \\D matches any character other than digit equivalent to [^0-9] space \\s matches spaces, tabs, line breaks not space \\S matches any other than space, tabs, line breaks character set [] matches any character in the set example expression: [aeiou]",
+  "keywords": [
+    "regex"
+  ],
+  "articleBody": "Note: If you find any issues in the post, do let me know in the comments section.\nRegular Expressions It is not a Programming language Everything is a character Character classes dot class . matches every character except line breaks. match Any [\\s\\S] matches every character including line breaks. word \\w matches low ascii characters - alphanumeric and underscore equivalent to [a-zA-Z0-9_] not word \\W matches anything other than a word equivalent to [^a-zA-Z0-9_] digit \\d matches any digit from 0 to 9 equivalent to [0-9] not digit \\D matches any character other than digit equivalent to [^0-9] space \\s matches spaces, tabs, line breaks not space \\S matches any other than space, tabs, line breaks character set [] matches any character in the set example expression: [aeiou]\nphrase: glib jocks vex dwarves!\nresult: glib jocks vex dwarves!\nnegated character set [^] does not match the characters in the set example expression: [aeiou]\nphrase: glib jocks vex dwarves!\nresult: g``lib joc``k``s vex d``war``ves``!\nrange character set [a-z] matches any character between the token mentions inclusive example expression: [g-i]\nphrase: abcdefghijklmnopqrstuvwxyz\nresult: abcdefg``h``ijklmnopqrstuvwxyz\nAnchor tags Using both will lead to exact word match beginning ^ marks the beginning of the string or beginning of the line if multiline is enabled ending $ marks the end of the strings or end of the line if multiline is enabled Groups capturing group () groups multiple tokens for extracting a substring or back referencing non-capturing group (?:) groups multiple tokens but does not form a group Quantifiers \u0026 Alternations plus + matches one or more preceding tokens example expression: Fo+\nphrase: abcdefghijklmnopqrstuvwxyz\nresult: abcdefg``h``ijklmnopqrstuvwxyz\nstar * matches 0 or more preceding characters example expression: Fo*\nmatches\nFo Foo Fooooo Foooooooo alternation | acts like Boolean OR matches before or after tokens example expression: b(a|e|u)d\nphrase: bad bud bod bed bid\nmatches: bad bud bod bed bid\noptional ? matches 0 or 1 of the preceding tokens essentially making it optional example expression: colou?r\nphrase: color colour\nmatches: color colour\nquantifiers {3} matches preceding character to exactly 3 times {1,3} matches preceding character between 1 and 3 inclusive {3,} matches preceding character 3 or more times example expression: be{2,4}\nphrase: be beeee beeeee\nmatches: be beeee beeeee\n",
+  "wordCount" : "372",
+  "inLanguage": "en",
+  "datePublished": "2017-08-21T00:00:00Z",
+  "dateModified": "2017-08-21T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Vedhavyas Singareddi"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://vedhavyas.com/posts/regex/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vedhavyas Singareddi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://vedhavyas.com/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
     }
 
-    :root {
-        --accent: black;
-        --border-width:  5px ;
-    }
+</script>
 
-</style>
-
-
-<link rel="stylesheet" href="http://vedhavyas.com/css/main.css">
-
-
-
-
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-
-
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"> 
-
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
- 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>
-    
-    <script>hljs.initHighlightingOnLoad();</script>
-
-
-
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
-<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
- <meta name="generator" content="Hugo 0.112.5">
-        
-
-        
-
-        
-            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        
-
-        
-
-    </head>
-
-    <body>
-        
-
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand visible-xs" href="#">Regular Expressions</a>
-                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse">
-                    
-                        <ul class="nav navbar-nav">
-                            
-                                <li><a href="/">Home</a></li>
-                            
-                                <li><a href="/posts/">Posts</a></li>
-                            
-                                <li><a href="/projects/">Projects</a></li>
-                            
-                                <li><a href="/tags/">Tags</a></li>
-                            
-                                <li><a href="https://drive.google.com/open?id=0B39uOd0SSzeSeWQwWHo5cDB0OEU">Resume</a></li>
-                            
-                        </ul>
-                    
-                    
-                        <ul class="nav navbar-nav navbar-right">
-                            
-                                <li class="navbar-icon"><a href="mailto:vedhavyas@vedhavyas.com"><i class="envelope-o"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://github.com/vedhavyas/"><i class="github"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://stackoverflow.com/users/3563197/vedhavyas"><i class="stack-overflow"></i></a></li>
-                            
-                        </ul>
-                    
-                </div>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://vedhavyas.com/" accesskey="h" title="Vedhavyas Singareddi (Alt + H)">Vedhavyas Singareddi</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
             </div>
-        </nav>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://vedhavyas.com/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://vedhavyas.com/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://vedhavyas.com/projects/" title="Projects">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://vedhavyas.com/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://drive.google.com/open?id=0B39uOd0SSzeSeWQwWHo5cDB0OEU" title="Resume">
+                    <span>Resume</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
 
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Regular Expressions
+    </h1>
+    <div class="post-meta"><span title='2017-08-21 00:00:00 +0000 UTC'>August 21, 2017</span>&nbsp;·&nbsp;Vedhavyas Singareddi
 
-<main>
-
-    <div>
-        <h2>Regular Expressions</h2>
-        <h5></h5>
-        
-<a href="http://vedhavyas.com/tags/regex"><kbd class="item-tag">regex</kbd></a>
-
-
-    </div>
-
-    <div align="start" class="content"><p><em>Note: If you find any issues in the post, do let me know in the comments section.</em></p>
-<h1 id="regular-expressions">Regular Expressions</h1>
+</div>
+  </header> 
+  <div class="post-content"><p><em>Note: If you find any issues in the post, do let me know in the comments section.</em></p>
+<h1 id="regular-expressions">Regular Expressions<a hidden class="anchor" aria-hidden="true" href="#regular-expressions">#</a></h1>
 <ul>
 <li>It is not a Programming language</li>
 <li>Everything is a character</li>
 </ul>
-<h2 id="character-classes">Character classes</h2>
-<h3 id="dot-class">dot class</h3>
+<h2 id="character-classes">Character classes<a hidden class="anchor" aria-hidden="true" href="#character-classes">#</a></h2>
+<h3 id="dot-class">dot class<a hidden class="anchor" aria-hidden="true" href="#dot-class">#</a></h3>
 <ul>
 <li><code>.</code></li>
 <li>matches every character except line breaks.</li>
 </ul>
-<h3 id="match-any">match Any</h3>
+<h3 id="match-any">match Any<a hidden class="anchor" aria-hidden="true" href="#match-any">#</a></h3>
 <ul>
 <li><code>[\s\S]</code></li>
 <li>matches every character including line breaks.</li>
 </ul>
-<h3 id="word">word</h3>
+<h3 id="word">word<a hidden class="anchor" aria-hidden="true" href="#word">#</a></h3>
 <ul>
 <li><code>\w</code></li>
 <li>matches low ascii characters - alphanumeric and underscore</li>
 <li>equivalent to <code>[a-zA-Z0-9_]</code></li>
 </ul>
-<h3 id="not-word">not word</h3>
+<h3 id="not-word">not word<a hidden class="anchor" aria-hidden="true" href="#not-word">#</a></h3>
 <ul>
 <li><code>\W</code></li>
 <li>matches anything other than a word</li>
 <li>equivalent to <code>[^a-zA-Z0-9_]</code></li>
 </ul>
-<h3 id="digit">digit</h3>
+<h3 id="digit">digit<a hidden class="anchor" aria-hidden="true" href="#digit">#</a></h3>
 <ul>
 <li><code>\d</code></li>
 <li>matches any digit from 0 to 9</li>
 <li>equivalent to <code>[0-9]</code></li>
 </ul>
-<h2 id="not-digit">not digit</h2>
+<h2 id="not-digit">not digit<a hidden class="anchor" aria-hidden="true" href="#not-digit">#</a></h2>
 <ul>
 <li><code>\D</code></li>
 <li>matches any character other than digit</li>
 <li>equivalent to <code>[^0-9]</code></li>
 </ul>
-<h2 id="space">space</h2>
+<h2 id="space">space<a hidden class="anchor" aria-hidden="true" href="#space">#</a></h2>
 <ul>
 <li><code>\s</code></li>
 <li>matches spaces, tabs, line breaks</li>
 </ul>
-<h3 id="not-space">not space</h3>
+<h3 id="not-space">not space<a hidden class="anchor" aria-hidden="true" href="#not-space">#</a></h3>
 <ul>
 <li><code>\S</code></li>
 <li>matches any other than space, tabs, line breaks</li>
 </ul>
-<h3 id="character-set">character set</h3>
+<h3 id="character-set">character set<a hidden class="anchor" aria-hidden="true" href="#character-set">#</a></h3>
 <ul>
 <li><code>[]</code></li>
 <li>matches any character in the set</li>
 </ul>
-<h4 id="example">example</h4>
+<h4 id="example">example<a hidden class="anchor" aria-hidden="true" href="#example">#</a></h4>
 <blockquote>
 <p><em>expression:</em> <code>[aeiou]</code></p>
 </blockquote>
@@ -201,12 +278,12 @@
 <blockquote>
 <p><em>result:</em> gl<code>i</code>b j<code>o</code>cks v<code>e</code>x dw<code>a</code>rv<code>e</code>s!</p>
 </blockquote>
-<h3 id="negated-character-set">negated character set</h3>
+<h3 id="negated-character-set">negated character set<a hidden class="anchor" aria-hidden="true" href="#negated-character-set">#</a></h3>
 <ul>
 <li><code>[^]</code></li>
 <li>does not match the characters in the set</li>
 </ul>
-<h4 id="example-1">example</h4>
+<h4 id="example-1">example<a hidden class="anchor" aria-hidden="true" href="#example-1">#</a></h4>
 <blockquote>
 <p><em>expression:</em> <code>[aeiou]</code></p>
 </blockquote>
@@ -216,12 +293,12 @@
 <blockquote>
 <p><em>result:</em> <code>g``l</code>i<code>b</code> <code>j</code>o<code>c``k``s</code> <code>v</code>e<code>x</code> <code>d``w</code>a<code>r``v</code>e<code>s``!</code></p>
 </blockquote>
-<h3 id="range-character-set">range character set</h3>
+<h3 id="range-character-set">range character set<a hidden class="anchor" aria-hidden="true" href="#range-character-set">#</a></h3>
 <ul>
 <li><code>[a-z]</code></li>
 <li>matches any character between the token mentions inclusive</li>
 </ul>
-<h4 id="example-2">example</h4>
+<h4 id="example-2">example<a hidden class="anchor" aria-hidden="true" href="#example-2">#</a></h4>
 <blockquote>
 <p><em>expression:</em> <code>[g-i]</code></p>
 </blockquote>
@@ -231,38 +308,38 @@
 <blockquote>
 <p><em>result:</em> abcdef<code>g``h``i</code>jklmnopqrstuvwxyz</p>
 </blockquote>
-<h2 id="anchor-tags">Anchor tags</h2>
+<h2 id="anchor-tags">Anchor tags<a hidden class="anchor" aria-hidden="true" href="#anchor-tags">#</a></h2>
 <ul>
 <li>Using both will lead to exact word match</li>
 </ul>
-<h3 id="beginning">beginning</h3>
+<h3 id="beginning">beginning<a hidden class="anchor" aria-hidden="true" href="#beginning">#</a></h3>
 <ul>
 <li><code>^</code></li>
 <li>marks the beginning of the string or beginning of the line if multiline is enabled</li>
 </ul>
-<h3 id="ending">ending</h3>
+<h3 id="ending">ending<a hidden class="anchor" aria-hidden="true" href="#ending">#</a></h3>
 <ul>
 <li><code>$</code></li>
 <li>marks the end of the strings or end of the line if multiline is enabled</li>
 </ul>
-<h2 id="groups">Groups</h2>
-<h3 id="capturing-group">capturing group</h3>
+<h2 id="groups">Groups<a hidden class="anchor" aria-hidden="true" href="#groups">#</a></h2>
+<h3 id="capturing-group">capturing group<a hidden class="anchor" aria-hidden="true" href="#capturing-group">#</a></h3>
 <ul>
 <li><code>()</code></li>
 <li>groups multiple tokens for extracting a substring or back referencing</li>
 </ul>
-<h3 id="non-capturing-group">non-capturing group</h3>
+<h3 id="non-capturing-group">non-capturing group<a hidden class="anchor" aria-hidden="true" href="#non-capturing-group">#</a></h3>
 <ul>
 <li><code>(?:)</code></li>
 <li>groups multiple tokens but does not form a group</li>
 </ul>
-<h2 id="quantifiers--alternations">Quantifiers &amp; Alternations</h2>
-<h3 id="plus">plus</h3>
+<h2 id="quantifiers--alternations">Quantifiers &amp; Alternations<a hidden class="anchor" aria-hidden="true" href="#quantifiers--alternations">#</a></h2>
+<h3 id="plus">plus<a hidden class="anchor" aria-hidden="true" href="#plus">#</a></h3>
 <ul>
 <li><code>+</code></li>
 <li>matches one or more preceding tokens</li>
 </ul>
-<h4 id="example-3">example</h4>
+<h4 id="example-3">example<a hidden class="anchor" aria-hidden="true" href="#example-3">#</a></h4>
 <blockquote>
 <p><em>expression:</em> <code>Fo+</code></p>
 </blockquote>
@@ -272,12 +349,12 @@
 <blockquote>
 <p><em>result:</em> abcdef<code>g``h``i</code>jklmnopqrstuvwxyz</p>
 </blockquote>
-<h3 id="star">star</h3>
+<h3 id="star">star<a hidden class="anchor" aria-hidden="true" href="#star">#</a></h3>
 <ul>
 <li><code>*</code></li>
 <li>matches 0 or more preceding characters</li>
 </ul>
-<h4 id="example-4">example</h4>
+<h4 id="example-4">example<a hidden class="anchor" aria-hidden="true" href="#example-4">#</a></h4>
 <blockquote>
 <p><em>expression:</em> <code>Fo*</code></p>
 </blockquote>
@@ -288,13 +365,13 @@
 Foo
 Fooooo
 Foooooooo
-</code></pre><h3 id="alternation">alternation</h3>
+</code></pre><h3 id="alternation">alternation<a hidden class="anchor" aria-hidden="true" href="#alternation">#</a></h3>
 <ul>
 <li><code>|</code></li>
 <li>acts like Boolean OR</li>
 <li>matches before or after tokens</li>
 </ul>
-<h4 id="example-5">example</h4>
+<h4 id="example-5">example<a hidden class="anchor" aria-hidden="true" href="#example-5">#</a></h4>
 <blockquote>
 <p><em>expression:</em> <code>b(a|e|u)d</code></p>
 </blockquote>
@@ -304,12 +381,12 @@ Foooooooo
 <blockquote>
 <p><em>matches:</em> <code>bad</code> <code>bud</code> bod <code>bed</code> bid</p>
 </blockquote>
-<h3 id="optional">optional</h3>
+<h3 id="optional">optional<a hidden class="anchor" aria-hidden="true" href="#optional">#</a></h3>
 <ul>
 <li><code>?</code></li>
 <li>matches 0 or 1 of the preceding tokens essentially making it optional</li>
 </ul>
-<h4 id="example-6">example</h4>
+<h4 id="example-6">example<a hidden class="anchor" aria-hidden="true" href="#example-6">#</a></h4>
 <blockquote>
 <p><em>expression:</em> <code>colou?r</code></p>
 </blockquote>
@@ -319,13 +396,13 @@ Foooooooo
 <blockquote>
 <p><em>matches:</em> <code>color</code> <code>colour</code></p>
 </blockquote>
-<h3 id="quantifiers">quantifiers</h3>
+<h3 id="quantifiers">quantifiers<a hidden class="anchor" aria-hidden="true" href="#quantifiers">#</a></h3>
 <ul>
 <li><code>{3}</code> matches preceding character to exactly 3 times</li>
 <li><code>{1,3}</code> matches preceding character between 1 and 3 inclusive</li>
 <li><code>{3,}</code> matches preceding character 3 or more times</li>
 </ul>
-<h4 id="example-7">example</h4>
+<h4 id="example-7">example<a hidden class="anchor" aria-hidden="true" href="#example-7">#</a></h4>
 <blockquote>
 <p><em>expression:</em> <code>be{2,4}</code></p>
 </blockquote>
@@ -335,18 +412,86 @@ Foooooooo
 <blockquote>
 <p><em>matches:</em> be <code>beeee</code> <code>beeee</code>e</p>
 </blockquote>
-</div>
 
-</main>
 
-        <footer>
-            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
-        </footer>
+  </div>
 
-        
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://vedhavyas.com/tags/regex/">regex</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="http://vedhavyas.com/">Vedhavyas Singareddi</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
 
-        
-    </body>
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
 
 </html>
-

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Vedhavyas Singareddi</title>
     <link>http://vedhavyas.com/</link>
@@ -13,7 +13,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://vedhavyas.com/projects/cuckoo-filter/</guid>
-      <description></description>
+      <description>Cuckoo filter: Practically better than Bloom filter</description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://vedhavyas.com/projects/scrape/</guid>
-      <description></description>
+      <description>Depth controllable Web scraper and Sitemap Generator in Go</description>
     </item>
     
     <item>
@@ -31,7 +31,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://vedhavyas.com/projects/queue/</guid>
-      <description></description>
+      <description>Queue with O(1) time complexity operations</description>
     </item>
     
     <item>
@@ -40,7 +40,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://vedhavyas.com/projects/min-binary-heap/</guid>
-      <description></description>
+      <description>Minimum Binary Heap sort in Golang</description>
     </item>
     
     <item>
@@ -49,7 +49,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://vedhavyas.com/projects/oauth2_central/</guid>
-      <description></description>
+      <description>Oauth2 for single sign-on</description>
     </item>
     
     <item>
@@ -58,7 +58,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://vedhavyas.com/projects/node-search/</guid>
-      <description></description>
+      <description>Depth First and Breadth First node search</description>
     </item>
     
     <item>
@@ -67,7 +67,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://vedhavyas.com/projects/machine-learning/</guid>
-      <description></description>
+      <description>Machine Learning Algorithms</description>
     </item>
     
     <item>

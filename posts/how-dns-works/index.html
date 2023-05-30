@@ -1,147 +1,224 @@
 <!DOCTYPE html>
-<html lang="en-us">
-    <head>
-        
+<html lang="en" dir="auto">
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>How DNS Works</title>
-        
-        <style>
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>How DNS Works | Vedhavyas Singareddi</title>
+<meta name="keywords" content="dns, root-name-server, TLDs, name-servers">
+<meta name="description" content="Note: If you find any issues in the post, let me know in the comments section
+This is a short post how DNS works. Prefer more comical learning, then go here - https://howdns.works/
+So what happens when you type in a website address? User entered address https://vedhavyas.com. Browser needs to resolve this address to an public IP address.
+Browser cache Browser check its local cache for an IP address that maps to given website address If found, call the IP address to serve the request.">
+<meta name="author" content="Vedhavyas Singareddi">
+<link rel="canonical" href="http://vedhavyas.com/posts/how-dns-works/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://vedhavyas.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://vedhavyas.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://vedhavyas.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://vedhavyas.com/apple-touch-icon.png">
+<link rel="mask-icon" href="http://vedhavyas.com/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-    html body {
-        font-family: 'Raleway', sans-serif;
-        background-color: white;
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="How DNS Works" />
+<meta property="og:description" content="Note: If you find any issues in the post, let me know in the comments section
+This is a short post how DNS works. Prefer more comical learning, then go here - https://howdns.works/
+So what happens when you type in a website address? User entered address https://vedhavyas.com. Browser needs to resolve this address to an public IP address.
+Browser cache Browser check its local cache for an IP address that maps to given website address If found, call the IP address to serve the request." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://vedhavyas.com/posts/how-dns-works/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2017-09-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-09-20T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How DNS Works"/>
+<meta name="twitter:description" content="Note: If you find any issues in the post, let me know in the comments section
+This is a short post how DNS works. Prefer more comical learning, then go here - https://howdns.works/
+So what happens when you type in a website address? User entered address https://vedhavyas.com. Browser needs to resolve this address to an public IP address.
+Browser cache Browser check its local cache for an IP address that maps to given website address If found, call the IP address to serve the request."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "http://vedhavyas.com/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "How DNS Works",
+      "item": "http://vedhavyas.com/posts/how-dns-works/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How DNS Works",
+  "name": "How DNS Works",
+  "description": "Note: If you find any issues in the post, let me know in the comments section\nThis is a short post how DNS works. Prefer more comical learning, then go here - https://howdns.works/\nSo what happens when you type in a website address? User entered address https://vedhavyas.com. Browser needs to resolve this address to an public IP address.\nBrowser cache Browser check its local cache for an IP address that maps to given website address If found, call the IP address to serve the request.",
+  "keywords": [
+    "dns", "root-name-server", "TLDs", "name-servers"
+  ],
+  "articleBody": "Note: If you find any issues in the post, let me know in the comments section\nThis is a short post how DNS works. Prefer more comical learning, then go here - https://howdns.works/\nSo what happens when you type in a website address? User entered address https://vedhavyas.com. Browser needs to resolve this address to an public IP address.\nBrowser cache Browser check its local cache for an IP address that maps to given website address If found, call the IP address to serve the request. Job done. If not found? Move to next step OS cache Browser asks os to resolve an IP from the address OS checks its cache. If found, let browser know about it Browser will save the ip to its cache and request is served If not found? Move to resolver Resolver cache OS will then ask the resolver for resolve the Address Resolver is your internet service provider resolver. This is how your ISP can track your internet activity. ISP such as ACT may even block the site by not resolving the address. So, how can you unblock it? You can use a different resolver instead of your ISP resolver. I prefer DNSCrypt. It provides a wide range of DNS resolvers to pick from. Now back to resolving request. Resolver will check its cache for the IP address. If found, return back to browser and request is served. If not found? Move to root name servers Root Name servers cache Every resolver should know at least one root name servers There are 13 root name servers around the world. Now root name server will search its cache for IP. If found, give it resolver If not found, it give resolvers the address of the Top Level Domain of the address to talk to. In our case its “.com” TLD, one of the largest TLD’s TLD cache If TLD has IP info of the address, gives it back to resolver If not, TLD will provide address of the name servers of the domain “Vedhavyas.com” In our case, TLD will provide the following name server address alex.ns.cloudflare.com cass.ns.cloudflare.com But how would TLD would know the name server address? Domain registrar. Whenever you buy a domain from a domain registrar, They communicate the name server details with the TLD My Domain registrar here is namecheap.com. This is where I provide them the custom name servers of cloudflare.com Else, namecheap.com will provide their own name servers Whats happens if the name server is a subdomain of the website we have asked for? Wouldn’t that be an infinite loop? Well, TLD provides name server address along with their IPs. So that resolver can directly talk to name server since those addresses are already resolved Why multiple name servers? Just in case one goes down :p Name Servers Name servers should know the IP address of the website, given website owner provided necessary details If not preset, then you will see a sad smiley on your browser saying failed to resolve the address. In our case, I have provided cloudflare.com required IP address of my website. Sometimes there can be multiple IP addresses as well. Just to in case ;p My IP address are “192.30.252.153”, “192.30.252.154”. These are IP addresses of GitHub.com server where my website is hosted Return Now resolver will cache all the necessary info during this trip to about any further trips The IP address is given to your browser and the website is served. ",
+  "wordCount" : "577",
+  "inLanguage": "en",
+  "datePublished": "2017-09-20T00:00:00Z",
+  "dateModified": "2017-09-20T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Vedhavyas Singareddi"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://vedhavyas.com/posts/how-dns-works/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vedhavyas Singareddi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://vedhavyas.com/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
     }
 
-    :root {
-        --accent: black;
-        --border-width:  5px ;
-    }
+</script>
 
-</style>
-
-
-<link rel="stylesheet" href="http://vedhavyas.com/css/main.css">
-
-
-
-
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-
-
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"> 
-
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
- 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>
-    
-    <script>hljs.initHighlightingOnLoad();</script>
-
-
-
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
-<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
- <meta name="generator" content="Hugo 0.112.5">
-        
-
-        
-
-        
-            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        
-
-        
-
-    </head>
-
-    <body>
-        
-
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand visible-xs" href="#">How DNS Works</a>
-                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse">
-                    
-                        <ul class="nav navbar-nav">
-                            
-                                <li><a href="/">Home</a></li>
-                            
-                                <li><a href="/posts/">Posts</a></li>
-                            
-                                <li><a href="/projects/">Projects</a></li>
-                            
-                                <li><a href="/tags/">Tags</a></li>
-                            
-                                <li><a href="https://drive.google.com/open?id=0B39uOd0SSzeSeWQwWHo5cDB0OEU">Resume</a></li>
-                            
-                        </ul>
-                    
-                    
-                        <ul class="nav navbar-nav navbar-right">
-                            
-                                <li class="navbar-icon"><a href="mailto:vedhavyas@vedhavyas.com"><i class="envelope-o"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://github.com/vedhavyas/"><i class="github"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://stackoverflow.com/users/3563197/vedhavyas"><i class="stack-overflow"></i></a></li>
-                            
-                        </ul>
-                    
-                </div>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://vedhavyas.com/" accesskey="h" title="Vedhavyas Singareddi (Alt + H)">Vedhavyas Singareddi</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
             </div>
-        </nav>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://vedhavyas.com/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://vedhavyas.com/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://vedhavyas.com/projects/" title="Projects">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://vedhavyas.com/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://drive.google.com/open?id=0B39uOd0SSzeSeWQwWHo5cDB0OEU" title="Resume">
+                    <span>Resume</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
 
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      How DNS Works
+    </h1>
+    <div class="post-meta"><span title='2017-09-20 00:00:00 +0000 UTC'>September 20, 2017</span>&nbsp;·&nbsp;Vedhavyas Singareddi
 
-<main>
-
-    <div>
-        <h2>How DNS Works</h2>
-        <h5></h5>
-        
-<a href="http://vedhavyas.com/tags/dns"><kbd class="item-tag">dns</kbd></a>
-
-<a href="http://vedhavyas.com/tags/root-name-server"><kbd class="item-tag">root-name-server</kbd></a>
-
-<a href="http://vedhavyas.com/tags/tlds"><kbd class="item-tag">TLDs</kbd></a>
-
-<a href="http://vedhavyas.com/tags/name-servers"><kbd class="item-tag">name-servers</kbd></a>
-
-
-    </div>
-
-    <div align="start" class="content"><p><em>Note: If you find any issues in the post, let me know in the comments section</em></p>
+</div>
+  </header> 
+  <div class="post-content"><p><em>Note: If you find any issues in the post, let me know in the comments section</em></p>
 <p>This is a short post how DNS works. Prefer more comical learning, then go here - <a href="https://howdns.works/">https://howdns.works/</a></p>
 <p>So what happens when you type in a website address?
 User entered address <a href="https://vedhavyas.com">https://vedhavyas.com</a>. Browser needs to resolve this address to an public IP address.</p>
@@ -223,18 +300,89 @@ User entered address <a href="https://vedhavyas.com">https://vedhavyas.com</a>. 
 </ol>
 </li>
 </ol>
-</div>
 
-</main>
 
-        <footer>
-            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
-        </footer>
+  </div>
 
-        
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://vedhavyas.com/tags/dns/">dns</a></li>
+      <li><a href="http://vedhavyas.com/tags/root-name-server/">root-name-server</a></li>
+      <li><a href="http://vedhavyas.com/tags/tlds/">TLDs</a></li>
+      <li><a href="http://vedhavyas.com/tags/name-servers/">name-servers</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="http://vedhavyas.com/">Vedhavyas Singareddi</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
 
-        
-    </body>
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
 
 </html>
-

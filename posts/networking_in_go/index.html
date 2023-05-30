@@ -1,149 +1,215 @@
 <!DOCTYPE html>
-<html lang="en-us">
-    <head>
-        
+<html lang="en" dir="auto">
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Networking in Go</title>
-        
-        <style>
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Networking in Go | Vedhavyas Singareddi</title>
+<meta name="keywords" content="tcp, udp, ip, networking, OSI">
+<meta name="description" content="Architecture Network protocols ISO OSI - Open systems interconnect Application Presentation Session Transport Network Data Link Physical TCP/IP - Transmission control/ Internet Protocol Application (Application, presentation, session) TCP / UDP (transport) IP (Network) H/w interface (Data Link, Physical) Other protocols include Bluetooth WiFi USB Firewire Gateways Repeater operates at physical layer and copies data from one subnet to another A bridge operates at Data Link layer and copies frames between networks Router operates at transport layer and not only moves data between networks but also decides on route Flow Each layer add a header to the packet from top to bottom Once received, each header is removed at the specific layer Connection Models Connection oriented Single connection is used to transfer packets from one network to other Once done, connection is closed Ex: Telephone conversation TCP Connectionless Each transfer is sent independently Ex: ordinary mail IP Connection networks are built over connection less.">
+<meta name="author" content="Vedhavyas Singareddi">
+<link rel="canonical" href="http://vedhavyas.com/posts/networking_in_go/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://vedhavyas.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://vedhavyas.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://vedhavyas.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://vedhavyas.com/apple-touch-icon.png">
+<link rel="mask-icon" href="http://vedhavyas.com/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-    html body {
-        font-family: 'Raleway', sans-serif;
-        background-color: white;
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Networking in Go" />
+<meta property="og:description" content="Architecture Network protocols ISO OSI - Open systems interconnect Application Presentation Session Transport Network Data Link Physical TCP/IP - Transmission control/ Internet Protocol Application (Application, presentation, session) TCP / UDP (transport) IP (Network) H/w interface (Data Link, Physical) Other protocols include Bluetooth WiFi USB Firewire Gateways Repeater operates at physical layer and copies data from one subnet to another A bridge operates at Data Link layer and copies frames between networks Router operates at transport layer and not only moves data between networks but also decides on route Flow Each layer add a header to the packet from top to bottom Once received, each header is removed at the specific layer Connection Models Connection oriented Single connection is used to transfer packets from one network to other Once done, connection is closed Ex: Telephone conversation TCP Connectionless Each transfer is sent independently Ex: ordinary mail IP Connection networks are built over connection less." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://vedhavyas.com/posts/networking_in_go/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2017-10-08T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-10-08T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Networking in Go"/>
+<meta name="twitter:description" content="Architecture Network protocols ISO OSI - Open systems interconnect Application Presentation Session Transport Network Data Link Physical TCP/IP - Transmission control/ Internet Protocol Application (Application, presentation, session) TCP / UDP (transport) IP (Network) H/w interface (Data Link, Physical) Other protocols include Bluetooth WiFi USB Firewire Gateways Repeater operates at physical layer and copies data from one subnet to another A bridge operates at Data Link layer and copies frames between networks Router operates at transport layer and not only moves data between networks but also decides on route Flow Each layer add a header to the packet from top to bottom Once received, each header is removed at the specific layer Connection Models Connection oriented Single connection is used to transfer packets from one network to other Once done, connection is closed Ex: Telephone conversation TCP Connectionless Each transfer is sent independently Ex: ordinary mail IP Connection networks are built over connection less."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "http://vedhavyas.com/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Networking in Go",
+      "item": "http://vedhavyas.com/posts/networking_in_go/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Networking in Go",
+  "name": "Networking in Go",
+  "description": "Architecture Network protocols ISO OSI - Open systems interconnect Application Presentation Session Transport Network Data Link Physical TCP/IP - Transmission control/ Internet Protocol Application (Application, presentation, session) TCP / UDP (transport) IP (Network) H/w interface (Data Link, Physical) Other protocols include Bluetooth WiFi USB Firewire Gateways Repeater operates at physical layer and copies data from one subnet to another A bridge operates at Data Link layer and copies frames between networks Router operates at transport layer and not only moves data between networks but also decides on route Flow Each layer add a header to the packet from top to bottom Once received, each header is removed at the specific layer Connection Models Connection oriented Single connection is used to transfer packets from one network to other Once done, connection is closed Ex: Telephone conversation TCP Connectionless Each transfer is sent independently Ex: ordinary mail IP Connection networks are built over connection less.",
+  "keywords": [
+    "tcp", "udp", "ip", "networking", "OSI"
+  ],
+  "articleBody": " Architecture Network protocols ISO OSI - Open systems interconnect Application Presentation Session Transport Network Data Link Physical TCP/IP - Transmission control/ Internet Protocol Application (Application, presentation, session) TCP / UDP (transport) IP (Network) H/w interface (Data Link, Physical) Other protocols include Bluetooth WiFi USB Firewire Gateways Repeater operates at physical layer and copies data from one subnet to another A bridge operates at Data Link layer and copies frames between networks Router operates at transport layer and not only moves data between networks but also decides on route Flow Each layer add a header to the packet from top to bottom Once received, each header is removed at the specific layer Connection Models Connection oriented Single connection is used to transfer packets from one network to other Once done, connection is closed Ex: Telephone conversation TCP Connectionless Each transfer is sent independently Ex: ordinary mail IP Connection networks are built over connection less. Ex: TCP over IP Connection less are built over connection. Ex: HTTP over TCP Distributed Computing Models Client - Server Client sends a request and server replies back Peer - peer Two components talk to each other in bi-directional way I.e.. both can request and both can respond filter Data is sent to a middle component which applies filter to the data and is passed on to third component Ex: Model -\u003e Controller -\u003e View Gartner’s classification of Component Distribution Distributed Data Small portion of data is held locally and large chunk remotely Ex: Mobile phone Remote Data Data is completely held remotely Ex: Network file service Distributed Transaction Logic is shared locally and remotely Ex: Web HTML javascript locally, server remotely Remote Presentation Ex: SSH Distributed Presentation Ex: GUI Socket-level programming TCP is connection oriented protocol UDP (User Datagram Protocol) is a connectionless protocol IP Datagram It is a connection less, unreliable delivery system Every datagram is considered independent It include checksum of source and destination to the header It also takes care of dividing and assembling larger datagrams to smaller and vice versa UDP Datagram It is a connection less protocol. It adds to IP, checksum of contents and ports TCP Datagram It provides reliable delivery system Services are identified by port numbers Data Serialisation Data is sent across networks as sequence of bytes TCP and UDP provide mechanisms for data transfer Application has to take care of marshalling and unmarshalling data. Typically converting the data structures to stream of bytes and back to data structures on the receiving end The Unmarshalling has to how the data was serialised in order to unmarshall it correctly XDR by sun External Data representation An early serialisation technique It type unsafe since no type info was provided in byte stream for unmarshaller Correctness was ensured by generating marshaller and unmarshaller by the compilers itself Self describing data ASN.1 Go does not support full list of ASN types and structures JSON GOB Serialisation technique specific for Go types and structures Doesn’t support by anyone out there Go also supports binary to text formats Base64 is one such Data Transfer HTTP transfer types: Byte encoded First part of the message is single byte to distinguish between different encodings Character encoded Message in the first line is a character to distinguish ",
+  "wordCount" : "540",
+  "inLanguage": "en",
+  "datePublished": "2017-10-08T00:00:00Z",
+  "dateModified": "2017-10-08T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Vedhavyas Singareddi"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://vedhavyas.com/posts/networking_in_go/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vedhavyas Singareddi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://vedhavyas.com/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
     }
 
-    :root {
-        --accent: black;
-        --border-width:  5px ;
-    }
+</script>
 
-</style>
-
-
-<link rel="stylesheet" href="http://vedhavyas.com/css/main.css">
-
-
-
-
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-
-
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"> 
-
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
- 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>
-    
-    <script>hljs.initHighlightingOnLoad();</script>
-
-
-
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
-<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
- <meta name="generator" content="Hugo 0.112.5">
-        
-
-        
-
-        
-            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        
-
-        
-
-    </head>
-
-    <body>
-        
-
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand visible-xs" href="#">Networking in Go</a>
-                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse">
-                    
-                        <ul class="nav navbar-nav">
-                            
-                                <li><a href="/">Home</a></li>
-                            
-                                <li><a href="/posts/">Posts</a></li>
-                            
-                                <li><a href="/projects/">Projects</a></li>
-                            
-                                <li><a href="/tags/">Tags</a></li>
-                            
-                                <li><a href="https://drive.google.com/open?id=0B39uOd0SSzeSeWQwWHo5cDB0OEU">Resume</a></li>
-                            
-                        </ul>
-                    
-                    
-                        <ul class="nav navbar-nav navbar-right">
-                            
-                                <li class="navbar-icon"><a href="mailto:vedhavyas@vedhavyas.com"><i class="envelope-o"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://github.com/vedhavyas/"><i class="github"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://stackoverflow.com/users/3563197/vedhavyas"><i class="stack-overflow"></i></a></li>
-                            
-                        </ul>
-                    
-                </div>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://vedhavyas.com/" accesskey="h" title="Vedhavyas Singareddi (Alt + H)">Vedhavyas Singareddi</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
             </div>
-        </nav>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://vedhavyas.com/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://vedhavyas.com/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://vedhavyas.com/projects/" title="Projects">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://vedhavyas.com/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://drive.google.com/open?id=0B39uOd0SSzeSeWQwWHo5cDB0OEU" title="Resume">
+                    <span>Resume</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
 
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Networking in Go
+    </h1>
+    <div class="post-meta"><span title='2017-10-08 00:00:00 +0000 UTC'>October 8, 2017</span>&nbsp;·&nbsp;Vedhavyas Singareddi
 
-<main>
-
-    <div>
-        <h2>Networking in Go</h2>
-        <h5></h5>
-        
-<a href="http://vedhavyas.com/tags/tcp"><kbd class="item-tag">tcp</kbd></a>
-
-<a href="http://vedhavyas.com/tags/udp"><kbd class="item-tag">udp</kbd></a>
-
-<a href="http://vedhavyas.com/tags/ip"><kbd class="item-tag">ip</kbd></a>
-
-<a href="http://vedhavyas.com/tags/networking"><kbd class="item-tag">networking</kbd></a>
-
-<a href="http://vedhavyas.com/tags/osi"><kbd class="item-tag">OSI</kbd></a>
-
-
-    </div>
-
-    <div align="start" class="content"><ul>
+</div>
+  </header> 
+  <div class="post-content"><ul>
 <li>Architecture
 <ul>
 <li>Network protocols
@@ -346,18 +412,90 @@
 </ul>
 </li>
 </ul>
-</div>
 
-</main>
 
-        <footer>
-            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
-        </footer>
+  </div>
 
-        
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://vedhavyas.com/tags/tcp/">tcp</a></li>
+      <li><a href="http://vedhavyas.com/tags/udp/">udp</a></li>
+      <li><a href="http://vedhavyas.com/tags/ip/">ip</a></li>
+      <li><a href="http://vedhavyas.com/tags/networking/">networking</a></li>
+      <li><a href="http://vedhavyas.com/tags/osi/">OSI</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="http://vedhavyas.com/">Vedhavyas Singareddi</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
 
-        
-    </body>
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
 
 </html>
-

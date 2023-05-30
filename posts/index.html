@@ -1,287 +1,325 @@
 <!DOCTYPE html>
-<html lang="en-us">
-    <head>
-        
+<html lang="en" dir="auto">
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Posts</title>
-        
-        <style>
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Posts | Vedhavyas Singareddi</title>
+<meta name="keywords" content="">
+<meta name="description" content="Posts - Vedhavyas Singareddi">
+<meta name="author" content="Vedhavyas Singareddi">
+<link rel="canonical" href="http://vedhavyas.com/posts/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://vedhavyas.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://vedhavyas.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://vedhavyas.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://vedhavyas.com/apple-touch-icon.png">
+<link rel="mask-icon" href="http://vedhavyas.com/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://vedhavyas.com/posts/index.xml">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-    html body {
-        font-family: 'Raleway', sans-serif;
-        background-color: white;
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Posts" />
+<meta property="og:description" content="Distributed Systems Engineer. Gopher. Polyglot. Cyclist" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://vedhavyas.com/posts/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Posts"/>
+<meta name="twitter:description" content="Distributed Systems Engineer. Gopher. Polyglot. Cyclist"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "http://vedhavyas.com/posts/"
+    }
+  ]
+}
+</script>
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
     }
 
-    :root {
-        --accent: black;
-        --border-width:  5px ;
-    }
+</script>
 
-</style>
-
-
-<link rel="stylesheet" href="http://vedhavyas.com/css/main.css">
-
-
-
-
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-
-
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"> 
-
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
- 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>
-    
-    <script>hljs.initHighlightingOnLoad();</script>
-
-
-
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
-<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
- <meta name="generator" content="Hugo 0.112.5">
-        
-            <link href="/posts/index.xml" rel="alternate" type="application/rss&#43;xml" title="Vedhavyas Singareddi" />
-            <link href="/posts/index.xml" rel="feed" type="application/rss&#43;xml" title="Vedhavyas Singareddi" />
-        
-
-        
-
-        
-            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        
-
-        
-
-    </head>
-
-    <body>
-        
-
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand visible-xs" href="#">Posts</a>
-                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse">
-                    
-                        <ul class="nav navbar-nav">
-                            
-                                <li><a href="/">Home</a></li>
-                            
-                                <li><a href="/posts/">Posts</a></li>
-                            
-                                <li><a href="/projects/">Projects</a></li>
-                            
-                                <li><a href="/tags/">Tags</a></li>
-                            
-                                <li><a href="https://drive.google.com/open?id=0B39uOd0SSzeSeWQwWHo5cDB0OEU">Resume</a></li>
-                            
-                        </ul>
-                    
-                    
-                        <ul class="nav navbar-nav navbar-right">
-                            
-                                <li class="navbar-icon"><a href="mailto:vedhavyas@vedhavyas.com"><i class="envelope-o"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://github.com/vedhavyas/"><i class="github"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://stackoverflow.com/users/3563197/vedhavyas"><i class="stack-overflow"></i></a></li>
-                            
-                        </ul>
-                    
-                </div>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://vedhavyas.com/" accesskey="h" title="Vedhavyas Singareddi (Alt + H)">Vedhavyas Singareddi</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
             </div>
-        </nav>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://vedhavyas.com/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://vedhavyas.com/posts/" title="Posts">
+                    <span class="active">Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://vedhavyas.com/projects/" title="Projects">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://vedhavyas.com/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://drive.google.com/open?id=0B39uOd0SSzeSeWQwWHo5cDB0OEU" title="Resume">
+                    <span>Resume</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    Posts
+  </h1>
+</header>
 
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Different IO methods for Linux
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Different Access I/O methods for Linux Types of Access:
+Read/Write MMAP Direct I/O Read/Write (DIO) Asynchronous Direct I/O Read/Write(ADIO) Read/Write: Traditional Read/Write and its variants(pread, preadv etc…) use read(2) and write(2) for reading and writing. Kernel will copy the required read data in the process address space and returns. If the requested data is available in page cache, kernel will return the data from page cache immediately. If not, blocks the thread and requests the disk to fetch the requested data....</p>
+  </div>
+  <footer class="entry-footer"><span title='2017-10-08 00:00:00 +0000 UTC'>October 8, 2017</span>&nbsp;·&nbsp;Vedhavyas Singareddi</footer>
+  <a class="entry-link" aria-label="post link to Different IO methods for Linux" href="http://vedhavyas.com/posts/different_io_methods_for_linux/"></a>
+</article>
 
-<main>
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Distributed systems for Fun and Profit
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Distributed systems for Fun and Profit Partitioning: Divide data into smaller independent subsets thereby reducing impact of dataset growth. Improves performance by limiting the amount of data to be examined and locating required data within the subset Improves availability as the nodes can fail independently Partition is very application specific Replication: Copies of same data over multiple machines to make available more bandwidth and computation Provides more availability as nodes can fail independently Since there will be multiple copies of a Data, need for good consistency model is required....</p>
+  </div>
+  <footer class="entry-footer"><span title='2017-10-08 00:00:00 +0000 UTC'>October 8, 2017</span>&nbsp;·&nbsp;Vedhavyas Singareddi</footer>
+  <a class="entry-link" aria-label="post link to Distributed systems for Fun and Profit" href="http://vedhavyas.com/posts/distributed_sys_for_fun_profit/"></a>
+</article>
 
-    <h2>Posts</h2>
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Networking in Go
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Architecture Network protocols ISO OSI - Open systems interconnect Application Presentation Session Transport Network Data Link Physical TCP/IP - Transmission control/ Internet Protocol Application (Application, presentation, session) TCP / UDP (transport) IP (Network) H/w interface (Data Link, Physical) Other protocols include Bluetooth WiFi USB Firewire Gateways Repeater operates at physical layer and copies data from one subnet to another A bridge operates at Data Link layer and copies frames between networks Router operates at transport layer and not only moves data between networks but also decides on route Flow Each layer add a header to the packet from top to bottom Once received, each header is removed at the specific layer Connection Models Connection oriented Single connection is used to transfer packets from one network to other Once done, connection is closed Ex: Telephone conversation TCP Connectionless Each transfer is sent independently Ex: ordinary mail IP Connection networks are built over connection less....</p>
+  </div>
+  <footer class="entry-footer"><span title='2017-10-08 00:00:00 +0000 UTC'>October 8, 2017</span>&nbsp;·&nbsp;Vedhavyas Singareddi</footer>
+  <a class="entry-link" aria-label="post link to Networking in Go" href="http://vedhavyas.com/posts/networking_in_go/"></a>
+</article>
 
-     <div class="item">
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Did You Know: Chapter 2
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>In the Soviet era Russia your land could be transferred to others by the state and hence was not private property. The .COM TLD was one of the first created in 1985 Root name servers There are 13 root name server around the world operated by 12 independent organisations Each name server starts with [name].root-servers.net, with name replaced with any of chars including [a-m] Even though there are 13 root name servers, each of the 13 organisations that maintain these servers deploys multiple physical servers around the globe This basically means, there is load balancer for each root name server before all the physical servers deployed in different locations Infrastructure TLDs: ....</p>
+  </div>
+  <footer class="entry-footer"><span title='2017-09-27 00:00:00 +0000 UTC'>September 27, 2017</span>&nbsp;·&nbsp;Vedhavyas Singareddi</footer>
+  <a class="entry-link" aria-label="post link to Did You Know: Chapter 2" href="http://vedhavyas.com/posts/did-you-know-2/"></a>
+</article>
 
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>How DNS Works
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Note: If you find any issues in the post, let me know in the comments section
+This is a short post how DNS works. Prefer more comical learning, then go here - https://howdns.works/
+So what happens when you type in a website address? User entered address https://vedhavyas.com. Browser needs to resolve this address to an public IP address.
+Browser cache Browser check its local cache for an IP address that maps to given website address If found, call the IP address to serve the request....</p>
+  </div>
+  <footer class="entry-footer"><span title='2017-09-20 00:00:00 +0000 UTC'>September 20, 2017</span>&nbsp;·&nbsp;Vedhavyas Singareddi</footer>
+  <a class="entry-link" aria-label="post link to How DNS Works" href="http://vedhavyas.com/posts/how-dns-works/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Did You Know: Chapter 1
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>The first internetwork message sent was “lo”, first 2 letters in “login”, since the receiving system crashed after “lo”. Circuit Switching Vs Packet Switching Circuit Switching The data is transferred in 3 phases Connection established Data Transfer Connection Released Each data unit knows the entire path since the path the connection is explicitly established for this transfer Hence, this is very reliable The data unit is processed at the Receiving end The delay between data unit is uniform But wastage of lots of resources Packet Switching Data is transferred directly Packet only know the end destination but the intermediate nodes may change Its not very reliable Data is processed at intermediate nodes as well as destination node The delay between data units is not uniform But very less resource wastage In packet switching, due to less reliability of the transfer, we end up doing acknowledgements to and fro....</p>
+  </div>
+  <footer class="entry-footer"><span title='2017-09-18 00:00:00 +0000 UTC'>September 18, 2017</span>&nbsp;·&nbsp;Vedhavyas Singareddi</footer>
+  <a class="entry-link" aria-label="post link to Did You Know: Chapter 1" href="http://vedhavyas.com/posts/did-you-know-chapter-1/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Regular Expressions
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Note: If you find any issues in the post, do let me know in the comments section.
+Regular Expressions It is not a Programming language Everything is a character Character classes dot class . matches every character except line breaks. match Any [\s\S] matches every character including line breaks. word \w matches low ascii characters - alphanumeric and underscore equivalent to [a-zA-Z0-9_] not word \W matches anything other than a word equivalent to [^a-zA-Z0-9_] digit \d matches any digit from 0 to 9 equivalent to [0-9] not digit \D matches any character other than digit equivalent to [^0-9] space \s matches spaces, tabs, line breaks not space \S matches any other than space, tabs, line breaks character set [] matches any character in the set example expression: [aeiou]...</p>
+  </div>
+  <footer class="entry-footer"><span title='2017-08-21 00:00:00 +0000 UTC'>August 21, 2017</span>&nbsp;·&nbsp;Vedhavyas Singareddi</footer>
+  <a class="entry-link" aria-label="post link to Regular Expressions" href="http://vedhavyas.com/posts/regex/"></a>
+</article>
+    </main>
     
-    
-    
+<footer class="footer">
+    <span>&copy; 2023 <a href="http://vedhavyas.com/">Vedhavyas Singareddi</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
 
-    
-    
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
 
-    <h4><a href="/posts/different_io_methods_for_linux/">Different IO methods for Linux</a></h4>
-    <h5>October 8, 2017</h5>
-    
-<a href="http://vedhavyas.com/tags/i/o"><kbd class="item-tag">I/O</kbd></a>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
 
-<a href="http://vedhavyas.com/tags/mmap"><kbd class="item-tag">MMAP</kbd></a>
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
 
-<a href="http://vedhavyas.com/tags/read/write"><kbd class="item-tag">Read/Write</kbd></a>
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
 
-<a href="http://vedhavyas.com/tags/direct-io"><kbd class="item-tag">Direct IO</kbd></a>
-
-<a href="http://vedhavyas.com/tags/async-direct-io"><kbd class="item-tag">Async Direct IO</kbd></a>
-
-<a href="http://vedhavyas.com/tags/aio"><kbd class="item-tag">AIO</kbd></a>
-
-<a href="http://vedhavyas.com/tags/dio"><kbd class="item-tag">DIO</kbd></a>
-
-
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/posts/distributed_sys_for_fun_profit/">Distributed systems for Fun and Profit</a></h4>
-    <h5>October 8, 2017</h5>
-    
-<a href="http://vedhavyas.com/tags/distributed-systems"><kbd class="item-tag">distributed-systems</kbd></a>
-
-<a href="http://vedhavyas.com/tags/paxos"><kbd class="item-tag">paxos</kbd></a>
-
-<a href="http://vedhavyas.com/tags/byzantine-problem"><kbd class="item-tag">byzantine-problem</kbd></a>
-
-<a href="http://vedhavyas.com/tags/raft"><kbd class="item-tag">raft</kbd></a>
-
-
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/posts/networking_in_go/">Networking in Go</a></h4>
-    <h5>October 8, 2017</h5>
-    
-<a href="http://vedhavyas.com/tags/tcp"><kbd class="item-tag">tcp</kbd></a>
-
-<a href="http://vedhavyas.com/tags/udp"><kbd class="item-tag">udp</kbd></a>
-
-<a href="http://vedhavyas.com/tags/ip"><kbd class="item-tag">ip</kbd></a>
-
-<a href="http://vedhavyas.com/tags/networking"><kbd class="item-tag">networking</kbd></a>
-
-<a href="http://vedhavyas.com/tags/osi"><kbd class="item-tag">OSI</kbd></a>
-
-
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/posts/did-you-know-2/">Did You Know: Chapter 2</a></h4>
-    <h5>September 27, 2017</h5>
-    
-<a href="http://vedhavyas.com/tags/tld"><kbd class="item-tag">tld</kbd></a>
-
-<a href="http://vedhavyas.com/tags/cmd"><kbd class="item-tag">cmd</kbd></a>
-
-<a href="http://vedhavyas.com/tags/linux"><kbd class="item-tag">linux</kbd></a>
-
-<a href="http://vedhavyas.com/tags/tgz"><kbd class="item-tag">tgz</kbd></a>
-
-
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/posts/how-dns-works/">How DNS Works</a></h4>
-    <h5>September 20, 2017</h5>
-    
-<a href="http://vedhavyas.com/tags/dns"><kbd class="item-tag">dns</kbd></a>
-
-<a href="http://vedhavyas.com/tags/root-name-server"><kbd class="item-tag">root-name-server</kbd></a>
-
-<a href="http://vedhavyas.com/tags/tlds"><kbd class="item-tag">TLDs</kbd></a>
-
-<a href="http://vedhavyas.com/tags/name-servers"><kbd class="item-tag">name-servers</kbd></a>
-
-
-
-</div>
- 
-
-</main>
-
-
-
-<div class="pages">
-
-    
-
-    
-        <a class="icon pages-icon" href="/posts/page/2/" rel="next">
-            <i class="fa fa-arrow-right"></i>
-        </a>
-    
-
-</div>
-
-
-
-        <footer>
-            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
-        </footer>
-
-        
-
-        
-    </body>
+</script>
+</body>
 
 </html>
-
